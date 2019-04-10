@@ -1,0 +1,14 @@
+{
+    "name": "blog",
+    "version": "1.0.0",
+    "main": "index.js",
+    "scripts": {
+        "dev": "vuepress dev --host 127.0.0.1 --open ./docs",
+        "build": "vuepress build ./docs"
+    },
+    "license": "MIT",
+    "dependencies": {
+        "axios": "^0.18.0",
+        "vuepress": "^1.0.0-alpha.47"
+    }
+}

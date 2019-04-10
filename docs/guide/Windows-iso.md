@@ -1,0 +1,30 @@
+---
+sidebarDepth: 2
+---
+# Windows-iso
+
+## Windows 10 半年频道
+
+### Windows 10 Business
+
+- 文件: cn_windows_10_business_edition_version_1809_updated_feb_2019_x64_dvd_56190772.iso
+- 大小: 5208895488 字节
+- MD5: 757D0E4F6F3EC325CC0B1166D39F6920
+- SHA1: 57A8DB1ABDF033CD104278E0B0995C00CA52F817
+- CRC32: D8165D48
+
+### Windows 10 Customer
+
+- 文件: Win10_1809Oct_v2_Chinese(Simplified)_x64.iso
+- 大小: 5380061184 字节
+- MD5: 1145DAEDA2469B43AA914FCC1B0325C7
+- SHA1: 62AFBEBAFB43DB7CA5F37D426C16E393060FC15D
+- CRC32: C2C60E58
+
+### Windows 10 China Get Genuine
+
+- 文件: Win10_1809Oct_v2_China_GGK_Chinese(Simplified)_x64.iso
+- 大小: 5058164736 字节
+- MD5: E8D287635506FFC027E99F3C728DD4C3
+- SHA1: 46021B442F83B9ECF314624B780F24E88A73B81B
+- CRC32: 701EF07F
