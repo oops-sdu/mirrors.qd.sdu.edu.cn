@@ -1,4 +1,4 @@
-# SDU-Mirrors-Fronted
+# SDU-Mirrors-Frontend
 
 ## run
 
