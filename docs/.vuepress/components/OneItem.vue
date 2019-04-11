@@ -23,7 +23,7 @@ function toThousands(num) {
 }
 // 时间戳处理
 function transformTime(timestamp = +new Date()) {
-    var time = new Date(timestamp);
+    var time = new Date(timestamp * 1000);
     var y = time.getFullYear();
     var M = time.getMonth() + 1;
     var d = time.getDate();
