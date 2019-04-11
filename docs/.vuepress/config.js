@@ -2,7 +2,7 @@ module.exports = {
     title: 'sdu mirrors',
     description: 'Just playing around',
     head: [
-        ['link', { rel: 'icon', href: '/logo.ico' }]
+        ['link', { rel: 'icon', href: '/favicon.ico' }]
     ],
     themeConfig: {
         search: false,
