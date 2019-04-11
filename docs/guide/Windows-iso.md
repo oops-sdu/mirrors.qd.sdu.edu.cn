@@ -9,6 +9,17 @@ sidebarDepth: 2
 
 如果您的电脑通过山东大学微软正版化平台授权，可选择此版本，并运行平台提供的程序以完成激活。
 
+#### 更新日期
+2019年2月
+
+#### 包含的版本
+- Windows 10 教育版 (批量授权版)
+- Windows 10 企业版 (批量授权版)
+- Windows 10 专业版 (批量授权版)
+- Windows 10 专业教育版 (批量授权版)
+- Windows 10 专业工作站版 (批量授权版)
+
+#### 下载
 - 文件: [cn_windows_10_business_edition_version_1809_updated_feb_2019_x64_dvd_56190772.iso](/windows-iso/iso/cn_windows_10_business_edition_version_1809_updated_feb_2019_x64_dvd_56190772.iso)
 - 大小: 5208895488 字节
 - MD5: 757D0E4F6F3EC325CC0B1166D39F6920
@@ -19,6 +30,18 @@ sidebarDepth: 2
 
 如果您的电脑通过“Windows 10 易升”升级到 Windows 10，请选择此版本，无需输入序列号，联网即可识别为正版。
 
+#### 更新日期
+2019年3月
+
+#### 包含的版本
+- Windows 10 家庭版 (零售版)
+- Windows 10 家庭单语言版 (零售版)
+- Windows 10 教育版 (零售版)
+- Windows 10 专业版 (零售版)
+- Windows 10 专业教育版 (零售版)
+- Windows 10 专业工作站版 (零售版)
+
+#### 下载
 - 文件: [Win10_1809Oct_v2_Chinese(Simplified)_x64.iso](/windows-iso/iso/Win10_1809Oct_v2_Chinese(Simplified)_x64.iso)
 - 大小: 5380061184 字节
 - MD5: 1145DAEDA2469B43AA914FCC1B0325C7
@@ -29,6 +52,13 @@ sidebarDepth: 2
 
 如果您的电脑在中国大陆销售，且由 OEM 预装了正版的 Windows 10，请选择此版本，无需输入序列号，联网即可识别为正版。
 
+#### 更新日期
+2019年3月
+
+#### 包含的版本
+- Windows 10 家庭中文版 (OEM 版)
+
+#### 下载
 - 文件: [Win10_1809Oct_v2_China_GGK_Chinese(Simplified)_x64.iso](/windows-iso/iso/Win10_1809Oct_v2_China_GGK_Chinese(Simplified)_x64.iso)
 - 大小: 5058164736 字节
 - MD5: E8D287635506FFC027E99F3C728DD4C3
@@ -41,6 +71,13 @@ sidebarDepth: 2
 
 如果您的电脑通过山东大学微软正版化平台授权，可选择此版本，并运行平台提供的程序以完成激活。
 
+#### 更新日期
+2018年10月
+
+#### 包含的版本
+- Windows 10 企业版 LTSC 2019
+
+#### 下载
 - 文件: [cn_windows_10_enterprise_ltsc_2019_x64_dvd_d17070a8.iso](/windows-iso/iso/cn_windows_10_enterprise_ltsc_2019_x64_dvd_d17070a8.iso)
 - 大小: 4290967552 字节
 - MD5: 122A3B1C2664D4A06CA926EBEC46F509
@@ -49,6 +86,13 @@ sidebarDepth: 2
 
 ### Windows 10 Enterprise LTSB 2016
 
+#### 更新日期
+2016年7月
+
+#### 包含的版本
+- Windows 10 企业版 LTSB 2016
+
+#### 下载
 如果您的电脑通过山东大学微软正版化平台授权，可选择此版本，并运行平台提供的程序以完成激活。
 
 - 文件: [cn_windows_10_enterprise_2016_ltsb_x64_dvd_9060409.iso](/windows-iso/iso/cn_windows_10_enterprise_2016_ltsb_x64_dvd_9060409.iso)
