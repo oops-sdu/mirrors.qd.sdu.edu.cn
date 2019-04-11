@@ -4,4 +4,3 @@
 
     yarn install
     yarn dev
-
