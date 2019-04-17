@@ -5,4 +5,3 @@
 ```ini
 Server = http://10.102.42.105/archlinux/$repo/os/$arch 
 ```
-

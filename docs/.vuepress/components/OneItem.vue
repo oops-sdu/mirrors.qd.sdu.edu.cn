@@ -95,5 +95,11 @@ export default {
     .date {
         float: right;
     }
+
+    @media (max-width: 600px) {
+        .size, .date {
+            display: none;
+        }
+    }
 }
 </style> 

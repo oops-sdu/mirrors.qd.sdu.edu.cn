@@ -17,7 +17,7 @@ module.exports = {
                 // '',
                 'Ubuntu.md',
                 'Windows-iso.md',
-				'ArchLinux.md'
+                'ArchLinux.md'
             ],
             '/blog/': [
                 // ''
