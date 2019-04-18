@@ -1,4 +1,5 @@
 module.exports = {
+    base: '/mirrors.qd.sdu.edu.cn/',
     title: 'sdu mirrors',
     description: 'Just playing around',
     head: [
