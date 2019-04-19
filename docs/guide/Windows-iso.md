@@ -112,7 +112,7 @@ sidebarDepth: 2
 - CRC32: 7FE5E2C4
 
 ## 常见问题 FAQ
-### 1. 如何安装 Windows，以及注意事项？
+### <a name="faq-how-to-install"></a>1. 如何安装 Windows，以及注意事项？
 如果您对 Windows 不熟悉，以下是我们推荐的安装步骤。该安装步骤强调“最佳实践”，即不使用老旧的。
 1. 进入电脑的 BIOS 设置界面，将 CSM 关闭，将 Boot mode 设置为 UEFI only。依主板型号不同，设置界面可能有较大差别，但通常可以在“Boot”页面下找到。
 2. 下载“微PE工具箱”并用它制作一个可启动 U 盘。
