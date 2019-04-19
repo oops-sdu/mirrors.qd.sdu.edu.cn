@@ -3,7 +3,7 @@ sidebarDepth: 2
 ---
 # Windows-iso
 
-请根据电脑的正版授权情况，从 `Business`、`Customer` 和 `China Get Genuine` 中选择正确的版本，否则安装成功后将无法激活。另外，强烈建议查看 [如何安装 Windows，以及注意事项？](#1-如何安装-windows以及注意事项)。
+请根据电脑的正版授权情况，从 `Business`、`Customer` 和 `China Get Genuine` 中选择正确的版本，否则安装成功后将无法激活。另外，强烈建议查看 [如何安装 Windows，以及注意事项？](#faq-how-to-install)。
 
 ## Windows 10 半年频道
 
