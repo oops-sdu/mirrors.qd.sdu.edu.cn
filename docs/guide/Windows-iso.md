@@ -124,11 +124,11 @@ sidebarDepth: 2
 尽量满足这一要求，但如果由于各种原因（如分区布局无法满足要求），无法创建 `微软保留分区`，可忽略此步。
 8. 如果其他分区还没有创建，可在此创建分区。注意，GUID 分区表下主分区的数量没有限制，也没有扩展分区、逻辑分区这种极不合理、易丢失数据的糟糕设计。虽然如此，仅仅是从良好习惯的方面考虑，我们不提倡过多的分区数量，通常以 1 个数据分区为宜。使用文件夹来做好分类，而不是分区。
 9. 打开 `Windows 安装器`（WinNTSetup），依次选择好 ISO 镜像、系统分区位置、`EFI 系统分区` 位置（软件可能会自动选择，也可能不会），然后选择合适的 Windows 版本，点击 `开始安装` 按钮即可。
-10. 安装结束后，建议将硬件时区设置为协调世界时，这可避免在与 Linux 共存时，切换系统会导致时间出错的问题。执行以下命令即可。
+10. 安装结束后，建议将硬件时区设置为协调世界时，这可避免在与 Linux 共存时，切换系统会导致时间出错的问题。以管理员权限执行以下命令。
 ```shell
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\TimeZoneInformation /v RealTimeIsUniversal" /t REG_DWORD /d 1
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\TimeZoneInformation" /v RealTimeIsUniversal /t REG_DWORD /d 1
 ```
-11. 建议将 `快速启动` 功能关闭。时至今日，固态硬盘已经普及，`快速启动` 功能对启动时间的提升不明显，且会带来多系统切换麻烦、对 NTFS 分区读写争用的问题，建议关闭。
+11. 建议将 `快速启动` 功能关闭。时至今日，固态硬盘已经普及，`快速启动` 功能对启动时间的提升不明显，且会带来多系统切换麻烦、对 NTFS 分区读写争用的问题，建议关闭。以管理员权限执行以下命令。
 ```shell
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Power" /v HiberbootEnabled /t REG_DWORD /d 0
 ```
