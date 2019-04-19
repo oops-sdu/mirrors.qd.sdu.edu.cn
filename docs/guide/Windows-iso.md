@@ -126,7 +126,7 @@ sidebarDepth: 2
 9. 打开 `Windows 安装器`（WinNTSetup），依次选择好 ISO 镜像、系统分区位置、`EFI 系统分区` 位置（软件可能会自动选择，也可能不会），然后选择合适的 Windows 版本，点击 `开始安装` 按钮即可。
 10. 安装结束后，建议将硬件时区设置为协调世界时，这可避免在与 Linux 共存时，切换系统会导致时间出错的问题。执行以下命令即可。
 ```shell
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\TimeZoneInformation /v   RealTimeIsUniversal" /t REG_DWORD /d 1
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\TimeZoneInformation /v RealTimeIsUniversal" /t REG_DWORD /d 1
 ```
 11. 建议将 `快速启动` 功能关闭。时至今日，固态硬盘已经普及，`快速启动` 功能对启动时间的提升不明显，且会带来多系统切换麻烦、对 NTFS 分区读写争用的问题，建议关闭。
 ```shell
