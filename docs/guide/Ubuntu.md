@@ -6,7 +6,7 @@
 
 ## Ubuntu 18.04 LTS
 
-Ubuntu 18.04 LTS (bionic) 用户请将 `/etc/apt/source.list` 文件改为以下内容：
+Ubuntu 18.04 LTS (bionic) 用户请将 `/etc/apt/sources.list` 文件改为以下内容：
 
     deb http://mirrors.oops-sdu.cn/ubuntu/ bionic main restricted universe multiverse
     deb http://mirrors.oops-sdu.cn/ubuntu/ bionic-security main restricted universe multiverse
@@ -17,7 +17,7 @@ Ubuntu 18.04 LTS (bionic) 用户请将 `/etc/apt/source.list` 文件改为以下
 
 ## Ubuntu 16.04 LTS
 
-Ubuntu 16.04 LTS (xenial) 用户请将 `/etc/apt/source.list` 文件改为以下内容：
+Ubuntu 16.04 LTS (xenial) 用户请将 `/etc/apt/sources.list` 文件改为以下内容：
 
     deb http://mirrors.oops-sdu.cn/ubuntu/ xenial main restricted universe multiverse
     deb http://mirrors.oops-sdu.cn/ubuntu/ xenial-security main restricted universe multiverse
