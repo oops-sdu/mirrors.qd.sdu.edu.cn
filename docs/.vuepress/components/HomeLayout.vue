@@ -41,7 +41,7 @@ export default {
         }
     },
     mounted: function() {
-        Axios.get("http://10.102.42.105/sync.json").then(res => {
+        Axios.get("//mirrors.oops-sdu.cn/sync.json").then(res => {
             this.items = res.data;
             this.items_bak = res.data;
         });
