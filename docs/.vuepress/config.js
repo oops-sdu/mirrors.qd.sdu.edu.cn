@@ -1,11 +1,12 @@
 module.exports = {
-    base: '/mirrors.qd.sdu.edu.cn/',
-    title: 'sdu mirrors',
-    description: 'Just playing around',
+    base: '/',
+    title: '山东大学镜像站',
+    // description: 'Just playing around',
     head: [
         ['link', { rel: 'icon', href: '/favicon.ico' }]
     ],
     themeConfig: {
+
         search: false,
         nav: [
             { text: '主页', link: '/' },
@@ -16,13 +17,14 @@ module.exports = {
             sidebarDepth: 1,
             '/guide/': [
                 // '',
-				'ArchLinux.md',
+                'ArchLinux.md',
                 'Ubuntu.md',
                 'Windows-iso.md'
-                
+
             ],
             '/blog/': [
-                // ''
+                // '',
+                '2019-4-21.md'
             ]
         },
         // activeHeaderLinks: false,
@@ -46,6 +48,6 @@ module.exports = {
         // editLinkText: '帮助我们改善此页面！'
     },
     markdown: {
-        lineNumbers: true
+        // lineNumbers: true
     }
 }

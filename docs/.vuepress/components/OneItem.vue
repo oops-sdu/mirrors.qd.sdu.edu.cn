@@ -1,9 +1,9 @@
 <template>
     <div class="item">
-        <a class="name" :href="url">{{name}}</a>
-        <a v-if="help_url!==''" class="label" :href="help_url">HELP</a>
+        <a class="name" :href="url" target="_blank">{{name}}</a>
+        <a v-if="help_url" class="label" :href="help_url">HELP</a>
         <span class="date">{{nowDate}}</span>
-        <span class="size">{{nowSize}} MB</span>
+        <span v-if="size!==0" class="size">{{nowSize}} MB</span>
     </div>
 </template>
 
