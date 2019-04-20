@@ -15,9 +15,10 @@ module.exports = {
             sidebarDepth: 1,
             '/guide/': [
                 // '',
+				'ArchLinux.md',
                 'Ubuntu.md',
-                'Windows-iso.md',
-                'ArchLinux.md'
+                'Windows-iso.md'
+                
             ],
             '/blog/': [
                 // ''
