@@ -129,7 +129,7 @@ sidebarDepth: 2
 ```shell
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\TimeZoneInformation" /v RealTimeIsUniversal /t REG_DWORD /d 1
 ```
-11. 建议将 `快速启动` 功能关闭。时至今日，固态硬盘已经普及，`快速启动` 功能对启动时间的提升不明显，且会带来多系统切换麻烦、对 NTFS 分区读写争用的问题，建议关闭。以管理员权限执行以下命令。
+12. 建议将 `快速启动` 功能关闭。时至今日，固态硬盘已经普及，`快速启动` 功能对启动时间的提升不明显，且会带来多系统切换麻烦、对 NTFS 分区读写争用的问题，建议关闭。以管理员权限执行以下命令。
 ```shell
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Power" /v HiberbootEnabled /t REG_DWORD /d 0
 ```
