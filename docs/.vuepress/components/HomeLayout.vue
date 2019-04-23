@@ -46,7 +46,8 @@ export default {
             this.items = res.data;
             this.items_bak = res.data;
         }).catch(()=>{
-		        Axios.get("//sync.json").then(res => {
+		        console.warn('intranet.mirrors.oops-sdu.cn not accessible. It is most likey you are under an OpenWRT router with rebind protection enabled. Please turn it off.')
+		        Axios.get("/sync.json").then(res => {
                 this.items = res.data;
                 this.items_bak = res.data;
             })
