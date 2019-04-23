@@ -50,7 +50,9 @@ export default {
 		        Axios.get("/sync.json").then(res => {
                 this.items = res.data;
                 this.items_bak = res.data;
-            })
+            }).catch(()=>{
+			    //todo
+			});
 		});
     }
 };
