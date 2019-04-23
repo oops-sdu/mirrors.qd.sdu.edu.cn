@@ -45,7 +45,12 @@ export default {
         Axios.get("//intranet.mirrors.oops-sdu.cn/sync.json").then(res => {
             this.items = res.data;
             this.items_bak = res.data;
-        });
+        }).catch(()=>{
+		        Axios.get("//sync.json").then(res => {
+                this.items = res.data;
+                this.items_bak = res.data;
+            })
+		});
     }
 };
 </script>
