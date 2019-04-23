@@ -23,10 +23,10 @@ sidebarDepth: 2
 
 #### 下载
 - 文件: [cn_windows_10_business_editions_version_1903_x64_dvd_e001dd2c.iso](//intranet.mirrors.oops-sdu.cn/windows-iso/iso/cn_windows_10_business_editions_version_1903_x64_dvd_e001dd2c.iso)
-- 大小: 5208895488 字节
-- MD5: 757D0E4F6F3EC325CC0B1166D39F6920
-- SHA1: 57A8DB1ABDF033CD104278E0B0995C00CA52F817
-- CRC32: D8165D48
+- 大小: 4815527936 字节
+- MD5: A26812A71C6D9A7698EBEAEF52887119
+- SHA1: BC6176BEE6130446421ACA236E7944EE88C92FE8
+- CRC32: 5134115E
 
 ### [1903] Windows 10 Customer
 
@@ -45,10 +45,11 @@ sidebarDepth: 2
 
 #### 下载
 - 文件: [cn_windows_10_consumer_editions_version_1903_x64_dvd_8f05241d.iso](//intranet.mirrors.oops-sdu.cn/windows-iso/iso/cn_windows_10_consumer_editions_version_1903_x64_dvd_8f05241d.iso)
-- 大小: 5380061184 字节
-- MD5: 1145DAEDA2469B43AA914FCC1B0325C7
-- SHA1: 62AFBEBAFB43DB7CA5F37D426C16E393060FC15D
-- CRC32: C2C60E58
+- 大小: 4905476096 字节
+- MD5: E2D2FD72B4363E1F6670E7CAB524D983
+- SHA1: CF1E64128585B6DDF7CC53D91758D7B0F836B863
+- CRC32: 872967AF
+
 
 ### [1809] Windows 10 China Get Genuine
 
