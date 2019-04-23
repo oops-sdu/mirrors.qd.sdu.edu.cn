@@ -22,7 +22,7 @@ sidebarDepth: 2
 - Windows 10 专业工作站版 (批量授权版)
 
 #### 下载
-- 文件: [cn_windows_10_business_edition_version_1809_updated_feb_2019_x64_dvd_56190772.iso](/windows-iso/iso/cn_windows_10_business_edition_version_1809_updated_feb_2019_x64_dvd_56190772.iso)
+- 文件: [cn_windows_10_business_edition_version_1809_updated_feb_2019_x64_dvd_56190772.iso](//intranet.mirrors.oops-sdu.cn/windows-iso/iso/cn_windows_10_business_edition_version_1809_updated_feb_2019_x64_dvd_56190772.iso)
 - 大小: 5208895488 字节
 - MD5: 757D0E4F6F3EC325CC0B1166D39F6920
 - SHA1: 57A8DB1ABDF033CD104278E0B0995C00CA52F817
@@ -44,7 +44,7 @@ sidebarDepth: 2
 - Windows 10 专业工作站版 (零售版)
 
 #### 下载
-- 文件: [Win10_1809Oct_v2_Chinese(Simplified)_x64.iso](/windows-iso/iso/Win10_1809Oct_v2_Chinese(Simplified)_x64.iso)
+- 文件: [Win10_1809Oct_v2_Chinese(Simplified)_x64.iso](//intranet.mirrors.oops-sdu.cn/windows-iso/iso/Win10_1809Oct_v2_Chinese(Simplified)_x64.iso)
 - 大小: 5380061184 字节
 - MD5: 1145DAEDA2469B43AA914FCC1B0325C7
 - SHA1: 62AFBEBAFB43DB7CA5F37D426C16E393060FC15D
@@ -61,7 +61,7 @@ sidebarDepth: 2
 - Windows 10 家庭中文版 (OEM 版)
 
 #### 下载
-- 文件: [Win10_1809Oct_v2_China_GGK_Chinese(Simplified)_x64.iso](/windows-iso/iso/Win10_1809Oct_v2_China_GGK_Chinese(Simplified)_x64.iso)
+- 文件: [Win10_1809Oct_v2_China_GGK_Chinese(Simplified)_x64.iso](//intranet.mirrors.oops-sdu.cn/windows-iso/iso/Win10_1809Oct_v2_China_GGK_Chinese(Simplified)_x64.iso)
 - 大小: 5058164736 字节
 - MD5: E8D287635506FFC027E99F3C728DD4C3
 - SHA1: 46021B442F83B9ECF314624B780F24E88A73B81B
@@ -80,7 +80,7 @@ sidebarDepth: 2
 - Windows 10 企业版 LTSC 2019
 
 #### 下载
-- 文件: [cn_windows_10_enterprise_ltsc_2019_x64_dvd_d17070a8.iso](/windows-iso/iso/cn_windows_10_enterprise_ltsc_2019_x64_dvd_d17070a8.iso)
+- 文件: [cn_windows_10_enterprise_ltsc_2019_x64_dvd_d17070a8.iso](//intranet.mirrors.oops-sdu.cn/windows-iso/iso/cn_windows_10_enterprise_ltsc_2019_x64_dvd_d17070a8.iso)
 - 大小: 4290967552 字节
 - MD5: 122A3B1C2664D4A06CA926EBEC46F509
 - SHA1: C0B4704E1336281C98A91438C7DF0F14B8F41E46
@@ -97,7 +97,7 @@ sidebarDepth: 2
 #### 下载
 如果您的电脑通过山东大学微软正版化平台授权，可选择此版本，并运行平台提供的程序以完成激活。
 
-- 文件: [cn_windows_10_enterprise_2016_ltsb_x64_dvd_9060409.iso](/windows-iso/iso/cn_windows_10_enterprise_2016_ltsb_x64_dvd_9060409.iso)
+- 文件: [cn_windows_10_enterprise_2016_ltsb_x64_dvd_9060409.iso](//intranet.mirrors.oops-sdu.cn/windows-iso/iso/cn_windows_10_enterprise_2016_ltsb_x64_dvd_9060409.iso)
 - 大小: 3821895680 字节
 - MD5: 0343DC55184A406AF9A8AB0D964CCCC6
 - SHA1: 9E405E950890D2A196565BCA35E152F9CFAD296D
@@ -105,7 +105,7 @@ sidebarDepth: 2
 
 ## 微PE工具箱
 - 官网地址: [www.wepe.com.cn](http://www.wepe.com.cn/)
-- 文件: [WePE_64_V2.0.exe](/windows-iso/iso/WePE_64_V2.0.exe)
+- 文件: [WePE_64_V2.0.exe](//intranet.mirrors.oops-sdu.cn/windows-iso/iso/WePE_64_V2.0.exe)
 - 大小: 217464180 字节
 - MD5: 3B54C31B9A9F9BB1E7AEF29EE65DDD93
 - SHA1: C2648E0A0003681102F1D790EAC93CA2978CD91E
@@ -121,7 +121,7 @@ sidebarDepth: 2
 5. 打开 `Diskgenius`。为了接下来操作方便，可将系统分区（C 盘）删除。也可不删除，视后续步骤而定。
 6. 检查系统所在硬盘是否存在 `EFI 系统分区`（ESP）。如果没有，新建一个 `EFI 系统分区`，大小可取 512 MiB，文件系统 FAT32。
 7. 按 Windows 的要求，在 `EFI 系统分区` 之后，第一个主分区之前，应该有一个 `微软保留分区`（MSR）。大小可取 512 MiB，无需关注文件系统。
-  尽量满足这一要求，但如果由于各种原因（如分区布局无法满足要求），无法创建 `微软保留分区`，可忽略此步。
+    尽量满足这一要求，但如果由于各种原因（如分区布局无法满足要求），无法创建 `微软保留分区`，可忽略此步。
 8. 在 `微软保留分区` 的后面创建一个文件系统为 NTFS 的主分区，建议大小至少为 100 GiB，或者，如果这是一个 120GB/240GB 的固态硬盘，使用所有的空间。此分区将作为系统分区（C 盘）。如果之前没有删除原来的系统分区（C 盘），且分区布局满足要求，也可只将其格式化。
 9. 如果其他分区还没有创建，可在此创建分区。注意，GUID 分区表下主分区的数量没有限制，也没有扩展分区、逻辑分区这种极不合理、易丢失数据的糟糕设计。虽然如此，仅仅是从良好习惯的方面考虑，我们不提倡过多的分区数量，通常以 1 个数据分区为宜。使用文件夹来做好分类，而不是分区。
 10. 打开 `Windows 安装器`（WinNTSetup），依次选择好 ISO 镜像、系统分区位置、`EFI 系统分区` 位置（软件可能会自动选择，也可能不会），然后选择合适的 Windows 版本，点击 `开始安装` 按钮即可。
