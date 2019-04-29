@@ -16,7 +16,7 @@ dnsmasq 默认不开启 rebind protection 功能，但官方版本的 OpenWRT �
 
 对于官方版本的 OpenWRT，可参考下图。即，选择 `网络` → `DHCP/DNS`  菜单，找到 `重绑定保护`，取消勾选这个选项。最后，别忘了点击 `保存&应用` 按钮。
 
-![](TurnOffRebindProtection-pic-1.png)
+![](../images/TurnOffRebindProtection-pic-1.png)
 
 一般而言，到此就结束了。
 
@@ -29,3 +29,4 @@ dnsmasq 默认不开启 rebind protection 功能，但官方版本的 OpenWRT �
 如果依然无法完成此操作，可考虑直接连接到山东大学校园网。
 
 如果存在必须使用路由器的理由，截至 2019 年 5月，目前的最佳选择是从[拼多多](https://www.pinduoduo.com/)或[转转](https://www.zhuanzhuan.com/)购买 `newifi 3` 或者 `斐讯 K2P`，并亲自或让卖家刷好第三方固件，推荐 `Padavan` 或带有闭源驱动的 `OpenWRT`。`newifi 3` 和 `斐讯 K2P` 都是 `MT7621` 芯片，分别由于挖矿风波和金融骗局导致市面上有大量存货，前者价格在 100 元以下，后者价格在 150 元左右。`newifi 3` 多为二手，由于自身设计原因导致无线性能略差，但仍满足日常需要，可手工加装屏蔽罩解决。`斐讯 K2P` 多为全新，无线性能完美，但 RAM 和 ROM 容量是 `newifi 3` 的一半，且不带 USB 接口。两者的官方固件均存在大量问题，建议必须刷好第三方固件。
+
