@@ -16,7 +16,7 @@ dnsmasq 默认不开启 rebind protection 功能，但官方版本的 OpenWRT �
 
 对于官方版本的 OpenWRT，可参考下图。即，选择 `网络` → `DHCP/DNS`  菜单，找到 `重绑定保护`，取消勾选这个选项。最后，别忘了点击 `保存&应用` 按钮。
 
-![](TurnOffRebindProtection-pic-1.png)
+![](./images/TurnOffRebindProtection-pic-1.png)
 
 一般而言，到此就结束了。
 
