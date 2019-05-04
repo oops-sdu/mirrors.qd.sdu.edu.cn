@@ -17,6 +17,7 @@ module.exports = {
             sidebarDepth: 1,
             '/guide/': [
                 // '',
+                "TurnOffRebindProtection.md",
                 'ArchLinux.md',
                 'Ubuntu.md',
                 'Windows-iso.md'
