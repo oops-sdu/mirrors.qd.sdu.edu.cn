@@ -9,3 +9,7 @@
 
     yarn install
     yarn dev
+    
+## deploy
+
+    ./deploy_to_github_pages.sh
