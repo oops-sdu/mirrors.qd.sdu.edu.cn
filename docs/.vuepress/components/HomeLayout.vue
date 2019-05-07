@@ -1,16 +1,25 @@
 <template>
-    <div class="main">
-        <input class="search" v-model="searchText" v-on:input="search">
-        <one-item
-            v-for="item in items"
-            :name="item.name"
-            :url="item.url"
-            :help_url="item.help_url"
-            :size="item.size"
-            :date="item.last_timestamp"
-            :status="item.status"
-        />
+  <div class="main">
+    <input class="search" v-model="searchText" @input="search">
+    <one-item
+      v-for="item in items"
+      :name="item.name"
+      :url="item.url"
+      :help_url="item.help_url"
+      :size="item.size"
+      :date="item.last_timestamp"
+      :status="item.status"
+    />
+    <div v-if="isIntranet" style>
+      intranet.mirrors.oops-sdu.cn 不可达
+      <br>
+      <br>1. 你可能在使用开启了rebind protection 功能的 OpenWRT 路由器，可参见：
+      <a
+        href="https://mirrors.oops-sdu.cn/guide/TurnOffRebindProtection.html"
+      >路由器用户必看：关闭 Rebind Protection</a>
+      <br>2. 你可能没通过山东大学校园网访问此网页
     </div>
+  </div>
 </template>
 
 <script>
@@ -18,55 +27,57 @@ import OneItem from "./OneItem.vue";
 import "axios";
 import Axios from "axios";
 export default {
-    components: { OneItem },
-    data: function() {
-        return {
-            searchText: "",
-            items: "",
-            items_bak: ""
-        };
-    },
-    methods: {
-        search: function() {
-            this.items = new Array();
-            for (let item of this.items_bak) {
-                if (
-                    item.name
-                        .toLowerCase()
-                        .indexOf(this.searchText.toLowerCase()) > -1
-                ) {
-                    this.items.push(item);
-                }
-            }
-        }
-    },
-    mounted: function() {
-        console.log(this.$site);
-        Axios.get("//intranet.mirrors.oops-sdu.cn/sync.json").then(res => {
+  components: { OneItem },
+  data: function() {
+    return {
+      searchText: "",
+      items: "",
+      items_bak: "",
+      isIntranet: false
+    };
+  },
+  methods: {
+    search: function() {
+      this.items = new Array();
+      for (let item of this.items_bak)
+        if (item.name.toLowerCase().indexOf(this.searchText.toLowerCase()) > -1)
+          this.items.push(item);
+    }
+  },
+  mounted: function() {
+    Axios.defaults.timeout = 5000;
+    Axios.get("//intranet.mirrors.oops-sdu.cn/sync.json")
+      .then(res => {
+        this.items = res.data;
+        this.items_bak = res.data;
+      })
+      .catch(() => {
+        console.warn(
+          "intranet.mirrors.oops-sdu.cn not accessible. It is most likey you are under an OpenWRT router with rebind protection enabled. Please turn it off. Besides, another explanation is you are not connected to sdu-net."
+        );
+        this.isIntranet = true;
+        Axios.get("/sync.json")
+          .then(res => {
             this.items = res.data;
             this.items_bak = res.data;
-        }).catch(()=>{
-                console.warn('intranet.mirrors.oops-sdu.cn not accessible. It is most likey you are under an OpenWRT router with rebind protection enabled. Please turn it off. Besides, another explanation is you are not connected to sdu-net.')
-                Axios.get("/sync.json").then(res => {
-                this.items = res.data;
-                this.items_bak = res.data;
-            }).catch(()=>{
-                //todo
-            });
-        });
-    }
+          })
+          .catch(() => {
+            //todo
+          });
+      });
+  }
 };
 </script>
 <style lang="stylus" scoped>
 .main {
-    width: 100%;
+  width: 100%;
 
-    .search {
-        border: 3px solid gray;
-        padding: 5px;
-        width: 100%;
-        font-size: 23px;
-        margin-bottom: 29px;
-    }
+  .search {
+    border: 3px solid gray;
+    padding: 5px;
+    width: 100%;
+    font-size: 23px;
+    margin-bottom: 29px;
+  }
 }
 </style> 
