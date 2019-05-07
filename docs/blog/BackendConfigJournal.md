@@ -1,4 +1,4 @@
-# 后端
+# 后端配置记录
 
 ## LXC 容器方案
 
@@ -346,6 +346,53 @@ systemctl start haveged
 ```
 
 注意，提供随机数是内核的事情，因此只能在主机上做这个事情。
+
+##### 创建 SWAP 文件 #####
+
+- 假设 SWAP 文件的大小为 10 GiB。创建一个大小为 10GiB 的全零文件。
+
+  ```sh
+  dd if=/dev/zero of=/data/swapfile bs=1M count=10240
+  ```
+  
+  *对于 XFS 或 F2FS 文件系统，请确保创建全零文件，而不是使用 fallocate 或者 dd 等创建稀疏文件。不然可能无法 mkswap 和 swapon。见 [Bug 1129205 - fallocate to create swap file creates a file with holes](https://bugzilla.redhat.com/show_bug.cgi?id=1129205#c3)。
+
+  *如非必要，不要随便使用 dd 等命令生成空的大文件。尽可能产生稀疏文件以节约时间和保护 SSD 寿命。本处为不得已而为之。*
+
+- 确保该文件的所有者和组均为 root。
+
+- 将其权限置为 600。
+
+  ```sh
+  chmod 600 /data/swapfile
+  ```
+  
+- 格式化并临时启用该交换文件。
+  
+  ```sh
+  mkswap /data/swapfile && swapon /data/swapfile
+  ```
+  
+- 确保 SWAP 生效。检查以下命令返回的结果中的 Swap 一行的值是否增加了。
+  
+  ```sh
+  free -h
+  ```
+
+- 修改 /etc/fstab。在最后增加一行
+
+  ```sh
+  /data/swapfile none swap defaults 0 0
+  ```
+  
+  *确保 /data 的挂载在该行之前出现。*
+
+- 重启系统，再用 free 命令查看 SWAP 是否生效。
+  
+   ```sh
+   systemctl reboot
+   free -h
+   ```
 
 ## 镜像同步方案
 
