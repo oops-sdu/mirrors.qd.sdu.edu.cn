@@ -25,7 +25,8 @@ module.exports = {
             ],
             '/blog/': [
                 // '',
-                '2019-4-21.md'
+                '2019-4-21.md',
+				'BackendConfigJournal.md'
             ]
         },
         // activeHeaderLinks: false,
