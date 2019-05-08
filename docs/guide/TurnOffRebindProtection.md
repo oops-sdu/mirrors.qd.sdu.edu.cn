@@ -1,3 +1,6 @@
+---
+sidebarDepth: 1
+---
 # 路由器用户必看：关闭 Rebind Protection
 
 ## 什么是 Rebind Protection，为什么要关闭它？
