@@ -1,5 +1,5 @@
 ---
-sidebarDepth: 1
+sidebarDepth: 0
 ---
 # 路由器用户必看：关闭 Rebind Protection
 
