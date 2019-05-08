@@ -1,3 +1,6 @@
+---
+sidebarDepth: 1
+---
 # Ubuntu
 
 目前支持的指令集：amd64 和 i386。

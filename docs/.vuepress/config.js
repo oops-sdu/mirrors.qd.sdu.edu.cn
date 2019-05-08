@@ -13,8 +13,9 @@ module.exports = {
             { text: '帮助', link: '/guide/' },
             { text: '博客', link: '/blog/' }
         ],
+        sidebarDepth: 0,
         sidebar: {
-            sidebarDepth: 1,
+
             '/guide/': [
                 // '',
                 "TurnOffRebindProtection.md",
@@ -26,7 +27,7 @@ module.exports = {
             '/blog/': [
                 // '',
                 '2019-4-21.md',
-				'BackendConfigJournal.md'
+                'BackendConfigJournal.md'
             ]
         },
         // activeHeaderLinks: false,
