@@ -11,13 +11,13 @@
       :status="item.status"
     />
     <div v-if="isIntranet" style>
-      intranet.mirrors.oops-sdu.cn 不可达
-      <br>
-      <br>1. 你可能在使用开启了rebind protection 功能的 OpenWRT 路由器，可参见：
-      <a
-        href="https://mirrors.oops-sdu.cn/guide/TurnOffRebindProtection.html"
-      >路由器用户必看：关闭 Rebind Protection</a>
-      <br>2. 你可能没通过山东大学校园网访问此网页
+      <h2>无法连接到 intranet.mirrors.oops-sdu.cn</h2>
+	  <ol>
+	    <li> 您的路由器可能开启了 Rebind Protection。请参阅 <a
+        href="/guide/TurnOffRebindProtection.html"
+      >路由器用户必看：关闭 Rebind Protection</a>。</li>
+	    <li> 您可能没有连接到山东大学校园网。</li>
+	  </ol>
     </div>
   </div>
 </template>
