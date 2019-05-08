@@ -14,7 +14,7 @@ module.exports = {
             { text: '博客', link: '/blog/' }
         ],
         sidebar: {
-            sidebarDepth: 0,
+            sidebarDepth: 1,
             '/guide/': [
                 // '',
                 "TurnOffRebindProtection.md",
