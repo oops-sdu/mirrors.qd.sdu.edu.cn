@@ -16,8 +16,7 @@ pushd "${DIR}"
 yarn build
 
 pushd docs/.vuepress/dist
-# download sync.json
-curl http://intranet.mirrors.oops-sdu.cn/sync.json > sync.json
+
 # required for custom domain at github pages
 echo 'mirrors.oops-sdu.cn' > CNAME
 
