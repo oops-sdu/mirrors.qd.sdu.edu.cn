@@ -105,6 +105,12 @@ systemctl stop networking
 systemctl disable networking
 ```
 
+根据安装时选择的软件包不同，NetworkManager 可能也被安装。卸载之。
+
+```bash
+apt remove network-manager
+```
+
 ###### 启动 systemd-networkd
 
 ```shell
@@ -131,16 +137,40 @@ ip r add default via 192.168.0.1 # 指定默认路由
 rm /etc/resolv.conf && echo "nameserver 8.8.8.8" > /etc/resolv.conf #设置 DNS
 ```
 
-###### 启用 systemd-resolved
+###### 使用 systemd-resolved
 
 使用与 systemd-networkd 配套的 systemd-resolved 以管理 DNS 地址。
 
+根据 Debian 版本不同，可能需要手动安装 systemd-resolved 软件包，也可能已经内置在系统中。
+
 ```bash
 apt install systemd-resolved
+```
+
+删除 resolvconf 软件包。我们不使用它管理 DNS 地址。
+
+```bash
+apt remove resolvconf
+```
+
+注意，为了避免与后面使用的 dnsmasq 冲突，需要禁用 systemd-networkd 的 DNS 缓存功能。此外，由于众所周知的原因，不能强制使用 DNSSEC。
+
+修改 `/etc/systemd/resolved.conf` 文件，设置以下选项：
+
+```ini
+[Resolve]
+Cache=no
+DNSStubListener=no
+DNSSEC=allow-downgrade
+```
+
+启动 systemd-resolved，并配置好 DNS。
+
+```bash
 systemctl enable systemd-resolved
 systemctl start systemd-resolved
 rm /etc/resolv.conf
-ln -s /run/systemd/resolve/stub-resolv.conf /etc/resolv.conf
+ln -s /run/systemd/resolve/resolv.conf /etc/resolv.conf
 ```
 
 ###### 为 LXC 提供网桥和 NAT
@@ -250,6 +280,19 @@ apt install dnsmasq
 no-resolv
 server=114.114.114.114
 interface=lxc-bridge
+```
+
+如果希望使用 `/etc/resolv.conf` 的 DNS 服务器设置，则文件内容只需要这一行：
+
+```ini
+interface=lxc-bridge
+```
+
+启动 dnsmasq 服务。注意，如果启动失败，使用 `ss -unlp` 命令检查是否有其他程序占用了 UDP 53 端口。
+
+```bash
+systemctl enable dnsmasq
+systemctl start dnsmasq
 ```
 
 #### 使用 LXC 3.0
