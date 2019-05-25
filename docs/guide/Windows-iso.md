@@ -51,12 +51,12 @@ sidebarDepth: 2
 - CRC32: 872967AF
 
 
-### [1809] Windows 10 China Get Genuine
+### [1903] Windows 10 China Get Genuine
 
 如果您的电脑在中国大陆销售，且由 OEM 预装了正版的 Windows 10，请选择此版本，无需输入序列号，联网即可识别为正版。
 
 #### 更新日期
-2019年3月
+2019年4月
 
 #### 包含的版本
 - Windows 10 家庭中文版 (OEM 版)
