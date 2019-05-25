@@ -62,11 +62,11 @@ sidebarDepth: 2
 - Windows 10 家庭中文版 (OEM 版)
 
 #### 下载
-- 文件: [Win10_1809Oct_v2_China_GGK_Chinese(Simplified)_x64.iso](//intranet.mirrors.oops-sdu.cn/windows-iso/iso/Win10_1809Oct_v2_China_GGK_Chinese(Simplified)_x64.iso)
-- 大小: 5058164736 字节
-- MD5: E8D287635506FFC027E99F3C728DD4C3
-- SHA1: 46021B442F83B9ECF314624B780F24E88A73B81B
-- CRC32: 701EF07F
+- 文件: [Win10_1903_V1_China_GGK_Chinese(Simplified)_x64.iso](//intranet.mirrors.oops-sdu.cn/windows-iso/iso/Win10_1903_V1_China_GGK_Chinese(Simplified)_x64.iso)
+- 大小: 4567844864 字节
+- MD5: E6C959BD5014C3FF7E36E506EEB4DE07
+- SHA1: 6DE2F7969A85146B2FBBA10C971B6C842779369B
+- CRC32: 1D7A4186
 
 ## Windows 10 长期服务分支
 
