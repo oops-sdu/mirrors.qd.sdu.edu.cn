@@ -134,7 +134,7 @@ ip r # 查看路由表
 ip n # 查看 ARP/NDP
 ip a add 192.168.0.2/24 dev ens192 # 为 ens192 分配指定的静态 IP
 ip r add default via 192.168.0.1 # 指定默认路由
-rm /etc/resolv.conf && echo "nameserver 8.8.8.8" > /etc/resolv.conf #设置 DNS
+rm /etc/resolv.conf ; echo "nameserver 8.8.8.8" > /etc/resolv.conf #设置 DNS
 ```
 
 ###### 使用 systemd-resolved
