@@ -272,6 +272,25 @@ firewall-cmd --zone=internal --add-service=dns --permanent
 
 如果主机上还有其他网卡，请根据网卡的角色手动为其指定一个区域。默认情况下，未指定区域的网卡将被接入 public 区域，但此处我们已经将 public 区域做了 masquerade，因此不要在 public 区域上接入其他不作为外网使用的网卡。
 
+###### 将后端切换为 nftables
+
+依据发行版不同，firewalld 可能使用 iptables 或 nftables 做后端。推荐使用 nftables 做后端。
+
+打开 `/etc/firewalld/firewalld.conf` 文件，找到并设置以下选项。
+
+```ini
+# FirewallBackend
+# Selects the firewall backend implementation.
+# Choices are:
+#	- nftables (default)
+#	- iptables (iptables, ip6tables, ebtables and ipset)
+FirewallBackend=nftables
+```
+
+如果之前设置为了 iptables，将其改为 nftables。修改后，可能需要重启主机才能完全生效。
+
+在 Debian 10 的软件包中，firewalld 依然依赖 iptables。不过，修改了配置文件并重启后，iptables 不做任何用途使用。`iptables -L` 的输出结果应该是空。不需要管它。
+
 ##### 安装 DNS 服务器
 
 这里的 DNS 服务器是为了缓存 DNS 解析结果，因此使用 dnsmasq。
