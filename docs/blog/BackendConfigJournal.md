@@ -266,6 +266,12 @@ firewall-cmd --zone=internal --add-service=dhcp --permanent
 firewall-cmd --zone=internal --add-service=dns --permanent
 ```
 
+###### 重要提示
+
+必须为 `lxc-bridge` 分配到一个不同于 public 区域之外的区域，而绝不可以接入到 public 区域（因为我们在 public 区域上设置了 masquerade）。
+
+如果主机上还有其他网卡，请根据网卡的角色手动为其指定一个区域。默认情况下，未指定区域的网卡将被接入 public 区域，但此处我们已经将 public 区域做了 masquerade，因此不要在 public 区域上接入其他不作为外网使用的网卡。
+
 ##### 安装 DNS 服务器
 
 这里的 DNS 服务器是为了缓存 DNS 解析结果，因此使用 dnsmasq。
