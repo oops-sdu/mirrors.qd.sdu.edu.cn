@@ -264,6 +264,8 @@ firewall-cmd --reload
 firewall-cmd --zone=internal --add-interface=lxc-bridge --permanent
 firewall-cmd --zone=internal --add-service=dhcp --permanent
 firewall-cmd --zone=internal --add-service=dns --permanent
+
+firewall-cmd --reload
 ```
 
 ###### 重要提示
