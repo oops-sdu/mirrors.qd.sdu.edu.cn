@@ -1,5 +1,5 @@
 ---
-sidebarDepth: 3
+sidebarDepth: 4
 ---
 # 后端配置记录
 
@@ -238,18 +238,37 @@ systemctl start firewalld
 
 缺省情况下，SSH 服务已被放行。
 
+###### 将后端切换为 nftables
+
+依据发行版不同，firewalld 可能使用 iptables 或 nftables 做后端。推荐使用 nftables 做后端。
+
+打开 `/etc/firewalld/firewalld.conf` 文件，找到并设置以下选项。
+
+```ini
+# FirewallBackend
+# Selects the firewall backend implementation.
+# Choices are:
+#	- nftables (default)
+#	- iptables (iptables, ip6tables, ebtables and ipset)
+FirewallBackend=nftables
+```
+
+如果之前设置为了 iptables，将其改为 nftables。修改后，可能需要重启主机才能完全生效。
+
+在 Debian 10 的软件包中，firewalld 依然依赖 iptables。不过，修改了配置文件并重启后，iptables 不做任何用途使用。`iptables -L` 的输出结果应该是空。不需要管它。
+
 ###### 配置外网
 
-将外网接口 `ens192` 接入 public 区域。此区域将作为 NAT 的出口，以及端口转发。
+将外网接口 `ens192` 接入 external 区域。此区域将作为 NAT 的出口，以及端口转发。
 
 ```bash
-firewall-cmd --zone=public --add-interface=ens192 --permanent
-firewall-cmd --zone=public --add-service=ssh --permanent # 这条应该默认存在，不过再写一次
+firewall-cmd --zone=external --add-interface=ens192 --permanent
+firewall-cmd --zone=external --add-service=ssh --permanent # 这条应该默认存在，不过再写一次
 
-firewall-cmd --zone=public --add-masquerade --permanent
-firewall-cmd --zone=public --add-forward-port=port=9002:proto=tcp:toport=22:toaddr=192.168.0.2 --permanent
-firewall-cmd --zone=public --add-forward-port=port=80:proto=tcp:toport=80:toaddr=192.168.0.2 --permanent
-firewall-cmd --zone=public --add-forward-port=port=443:proto=tcp:toport=443:toaddr=192.168.0.2 --permanent
+firewall-cmd --zone=external --add-masquerade --permanent
+firewall-cmd --zone=external --add-forward-port=port=9002:proto=tcp:toport=22:toaddr=192.168.0.2 --permanent
+firewall-cmd --zone=external --add-forward-port=port=80:proto=tcp:toport=80:toaddr=192.168.0.2 --permanent
+firewall-cmd --zone=external --add-forward-port=port=443:proto=tcp:toport=443:toaddr=192.168.0.2 --permanent
 
 firewall-cmd --reload
 ```
@@ -270,28 +289,9 @@ firewall-cmd --reload
 
 ###### 重要提示
 
-必须为 `lxc-bridge` 分配到一个不同于 public 区域之外的区域，而绝不可以接入到 public 区域（因为我们在 public 区域上设置了 masquerade）。
+必须为 `lxc-bridge` 分配到一个不同于 external 区域之外的区域，而绝不可以接入到 external 区域（因为我们在 external 区域上设置了 masquerade）。
 
-如果主机上还有其他网卡，请根据网卡的角色手动为其指定一个区域。默认情况下，未指定区域的网卡将被接入 public 区域，但此处我们已经将 public 区域做了 masquerade，因此不要在 public 区域上接入其他不作为外网使用的网卡。
-
-###### 将后端切换为 nftables
-
-依据发行版不同，firewalld 可能使用 iptables 或 nftables 做后端。推荐使用 nftables 做后端。
-
-打开 `/etc/firewalld/firewalld.conf` 文件，找到并设置以下选项。
-
-```ini
-# FirewallBackend
-# Selects the firewall backend implementation.
-# Choices are:
-#	- nftables (default)
-#	- iptables (iptables, ip6tables, ebtables and ipset)
-FirewallBackend=nftables
-```
-
-如果之前设置为了 iptables，将其改为 nftables。修改后，可能需要重启主机才能完全生效。
-
-在 Debian 10 的软件包中，firewalld 依然依赖 iptables。不过，修改了配置文件并重启后，iptables 不做任何用途使用。`iptables -L` 的输出结果应该是空。不需要管它。
+如果主机上还有其他网卡，请根据网卡的角色手动为其指定一个区域。默认情况下，未指定区域的网卡将被接入 public 区域。作为外网使用的网卡应接入之前配置好的 external 区域。
 
 ##### 安装 DNS 服务器
 
@@ -355,7 +355,7 @@ lxc-stop -n NAME
 
 ##### 为容器分配网络、共享文件夹、自动启动
 
-编辑 `/var/lib/lxc/NAME/config` 文件，最后两行应该像这样
+编辑 `/var/lib/lxc/NAME/config` 文件，最后两行应该像这样。（早期版本的 LXC 与此略有不同。）
 
 ```ini
 # Network configuration
@@ -388,7 +388,7 @@ lxc.mount.entry = /path/to/folder1 path/to/folder2 none bind 0 0
 
 首先，尽管主机已经开启了 DHCP 服务，应当使用静态 IP 来配置容器，这样才能和之前在 firewalld 中配置好的端口转发规则一致。假设之前在主机内设置了 `firewall-cmd --zone=public --add-forward-port=port=9002:proto=tcp:toport=22:toaddr=192.168.0.2`，则将容器内的 IP 设置为 `192.168.0.2`
 
-后，直接安装 SSH 服务器即可从主机的 9002 端口访问 SSH。同样，在容器内可以使用 systemd-networkd 来配置网络。
+后，直接安装 SSH 服务器即可从主机的 9002 端口访问 SSH。同样，在容器内推荐使用 systemd-networkd 来配置网络。
 
 #### LXC 主机的其他配置
 
@@ -420,53 +420,69 @@ systemctl start haveged
 
 注意，提供随机数是内核的事情，因此只能在主机上做这个事情。
 
-##### 创建 SWAP 文件 #####
+##### 创建 SWAP 文件
 
-- 假设 SWAP 文件的大小为 10 GiB。创建一个大小为 10GiB 的全零文件。
+1. 假设 SWAP 文件的大小为 10 GiB。创建一个大小为 10GiB 的全零文件。
 
   ```sh
   dd if=/dev/zero of=/data/swapfile bs=1M count=10240
   ```
-  
+
   *对于 XFS 或 F2FS 文件系统，请确保创建全零文件，而不是使用 fallocate 或者 dd 等创建稀疏文件。不然可能无法 mkswap 和 swapon。见 [Bug 1129205 - fallocate to create swap file creates a file with holes](https://bugzilla.redhat.com/show_bug.cgi?id=1129205#c3)。
 
   *如非必要，不要随便使用 dd 等命令生成空的大文件。尽可能产生稀疏文件以节约时间和保护 SSD 寿命。本处为不得已而为之。*
 
-- 确保该文件的所有者和组均为 root。
+2. 确保该文件的所有者和组均为 root。
 
-- 将其权限置为 600。
+3. 将其权限置为 600。
 
   ```sh
   chmod 600 /data/swapfile
   ```
-  
-- 格式化并临时启用该交换文件。
-  
+
+4. 格式化并临时启用该交换文件。
+
   ```sh
   mkswap /data/swapfile && swapon /data/swapfile
   ```
-  
-- 确保 SWAP 生效。检查以下命令返回的结果中的 Swap 一行的值是否增加了。
-  
+
+5. 确保 SWAP 生效。检查以下命令返回的结果中的 Swap 一行的值是否增加了。
+
   ```sh
   free -h
   ```
 
-- 修改 /etc/fstab。在最后增加一行
+6. 修改 /etc/fstab。在最后增加一行
 
   ```sh
   /data/swapfile none swap defaults 0 0
   ```
-  
+
   *确保 /data 的挂载在该行之前出现。*
 
-- 重启系统，再用 free 命令查看 SWAP 是否生效。
-  
-   ```sh
-   systemctl reboot
-   free -h
-   ```
+7. 重启系统，再用 free 命令查看 SWAP 是否生效。
+
+  ```sh
+  systemctl reboot
+  free -h
+  ```
+
+##### 加速 SSH 登录
+
+默认配置的 SSH 服务会对客户端 IP 做一些检查，如 DNS 反向解析、GSS 认证，非常耗时。建议关闭。
+打开 `/etc/ssh/sshd_config` 文件，找到并设置以下选项。
+```
+UseDNS no
+GSSAPIAuthentication no
+```
+
+重启 SSH 服务。
+```sh
+systemctl restart sshd
+```
+
 
 ## 镜像同步方案
 
 未完待续。
+
