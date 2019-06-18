@@ -367,7 +367,7 @@ lxc.net.0.type = empty
 ```ini
 # Network configuration
 lxc.net.0.type = veth
-lxc.net.0.link = virbr0
+lxc.net.0.link = lxc-bridge
 lxc.net.0.flags = up
 lxc.net.0.hwaddr = 00:16:3e:xx:xx:xx
 
