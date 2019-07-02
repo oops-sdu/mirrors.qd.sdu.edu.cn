@@ -5,3 +5,10 @@
 ```ini
 Server = http://intranet.mirrors.oops-sdu.cn/archlinux/$repo/os/$arch 
 ```
+
+更新 Pacman 数据库。
+
+```bash
+pacman -Syu
+```
+
