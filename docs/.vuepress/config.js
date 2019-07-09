@@ -21,6 +21,7 @@ module.exports = {
                 "TurnOffRebindProtection.md",
                 'ArchLinux.md',
                 'Ubuntu.md',
+                'Debian.md',
                 'Windows-iso.md'
 
             ],
