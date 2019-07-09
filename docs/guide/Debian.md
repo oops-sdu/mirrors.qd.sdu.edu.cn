@@ -20,4 +20,5 @@ deb http://intranet.mirrors.oops-sdu.cn/debian buster-updates main contrib non-f
 
 ## 一点小提示
 debian-security 的 buster/updates 提供了重要的安全更新。类比于 ubuntu 中的 bionic-security。
+
 debian 的 buster-updates 提前提供下一个更新点的部分软件更新，如病毒扫描程序和时区数据等。类比于 ubuntu 中的 bionic-updates。
