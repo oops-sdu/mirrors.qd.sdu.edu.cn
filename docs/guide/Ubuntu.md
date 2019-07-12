@@ -15,6 +15,7 @@ Ubuntu 18.04 LTS (bionic) 用户请将 `/etc/apt/sources.list` 文件改为以�
 
     deb http://intranet.mirrors.oops-sdu.cn/ubuntu/ bionic main restricted universe multiverse
     deb http://intranet.mirrors.oops-sdu.cn/ubuntu/ bionic-security main restricted universe multiverse
+    deb http://intranet.mirrors.oops-sdu.cn/ubuntu/ bionic-updates main restricted universe multiverse
 
 ## Ubuntu 16.04 LTS
 
@@ -22,6 +23,7 @@ Ubuntu 16.04 LTS (xenial) 用户请将 `/etc/apt/sources.list` 文件改为以�
 
     deb http://intranet.mirrors.oops-sdu.cn/ubuntu/ xenial main restricted universe multiverse
     deb http://intranet.mirrors.oops-sdu.cn/ubuntu/ xenial-security main restricted universe multiverse
+    deb http://intranet.mirrors.oops-sdu.cn/ubuntu/ xenial-updates main restricted universe multiverse
 
 ## 强迫症选项
 
