@@ -32,7 +32,7 @@ Ubuntu 16.04 LTS (xenial) 用户请将 `/etc/apt/sources.list` 文件改为以�
 1. 搜索并删除所有 i386 的软件包。不过，默认情况下，应该没有 i386 软件包。
 
 ```bash
-apt-get remove "^.*:i386$"
+apt-get remove --purge `dpkg --get-selections | awk '/i386/{print $1}'`
 ```
 
 2. 移除对 i386 架构的支持。
