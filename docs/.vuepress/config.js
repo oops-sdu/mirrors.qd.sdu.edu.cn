@@ -4,7 +4,7 @@ module.exports = {
     // description: 'Just playing around',
     head: [
         ['link', { rel: 'icon', href: '/favicon.ico' }],
-        ['meta', { 'http-equiv': "X-UA-Compatible", content: "IE=edge" }],
+        // ['meta', { 'http-equiv': "X-UA-Compatible", content: "IE=edge" }],
         ['meta', { name: 'renderer', content: 'webkit' }]
     ],
     themeConfig: {
