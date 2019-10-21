@@ -7,12 +7,12 @@ sidebarDepth: 2
 
 ## Windows 10 半年频道
 
-### [1903] Windows 10 Business
+### [1909] Windows 10 Business
 
 如果您的电脑通过[山东大学微软正版软件管理运营平台](http://softms.sdu.edu.cn)授权，可选择此版本，并运行平台提供的程序以完成激活。
 
 #### 更新日期
-2019年4月
+2019年10月
 
 #### 包含的版本
 - Windows 10 教育版 (批量授权版)
@@ -22,18 +22,18 @@ sidebarDepth: 2
 - Windows 10 专业工作站版 (批量授权版)
 
 #### 下载
-- 文件: [cn_windows_10_business_editions_version_1903_x64_dvd_e001dd2c.iso](//intranet.mirrors.oops-sdu.cn/windows-iso/iso/cn_windows_10_business_editions_version_1903_x64_dvd_e001dd2c.iso)
-- 大小: 4815527936 字节
-- MD5: A26812A71C6D9A7698EBEAEF52887119
-- SHA1: BC6176BEE6130446421ACA236E7944EE88C92FE8
-- CRC32: 5134115E
+- 文件: [cn_windows_10_business_editions_version_1909_x64_dvd_0ca83907.iso](//intranet.mirrors.oops-sdu.cn/windows-iso/iso/cn_windows_10_business_editions_version_1909_x64_dvd_0ca83907.iso)
+- 大小: 5275090944 字节
+- MD5: 3CDF928B973D49552644B9117A8BF67C
+- SHA1: A153526CDD406A249A93F30B447B259FED560C1D
+- CRC32: AEF9E461
 
-### [1903] Windows 10 Customer
+### [1909] Windows 10 Customer
 
 如果您的电脑通过“Windows 10 易升”升级到 Windows 10，请选择此版本，无需输入序列号，联网即可识别为正版。
 
 #### 更新日期
-2019年4月
+2019年10月
 
 #### 包含的版本
 - Windows 10 家庭版 (零售版)
@@ -44,11 +44,11 @@ sidebarDepth: 2
 - Windows 10 专业工作站版 (零售版)
 
 #### 下载
-- 文件: [cn_windows_10_consumer_editions_version_1903_x64_dvd_8f05241d.iso](//intranet.mirrors.oops-sdu.cn/windows-iso/iso/cn_windows_10_consumer_editions_version_1903_x64_dvd_8f05241d.iso)
-- 大小: 4905476096 字节
-- MD5: E2D2FD72B4363E1F6670E7CAB524D983
-- SHA1: CF1E64128585B6DDF7CC53D91758D7B0F836B863
-- CRC32: 872967AF
+- 文件: [cn_windows_10_consumer_editions_version_1909_x64_dvd_76365bf8.iso](//intranet.mirrors.oops-sdu.cn/windows-iso/iso/cn_windows_10_consumer_editions_version_1909_x64_dvd_76365bf8.iso)
+- 大小: 5381154816 字节
+- MD5: E4166793CED132CE90494CD51CA51F51
+- SHA1: 5F3C8E743C9E87BDEFDAABB49BBD0D7AA9221E7A
+- CRC32: A592906A
 
 
 ### [1903] Windows 10 China Get Genuine
