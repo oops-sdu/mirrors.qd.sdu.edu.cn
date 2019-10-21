@@ -41,3 +41,6 @@ apt-get remove --purge `dpkg --get-selections | awk '/i386/{print $1}'`
 dpkg --remove-architecture i386
 ```
 
+## Snap 仓库
+
+目前，互联网上不存在针对 Ubuntu Snap 应用商店的镜像，因此请尽量使用 `apt` 命令，而非图形界面的 Ubuntu 应用商店或者 `snap` 命令，以避免下载速度慢甚至无法下载的情况。
