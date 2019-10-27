@@ -484,5 +484,233 @@ systemctl restart sshd
 
 ## 镜像同步方案
 
-未完待续。
+### 工具选择
 
+镜像站同步的内容大致分为两类：一类是完全同步的仓库，如 ArchLinux 源；一类是需要选择性同步的仓库，如 Debian、Ubuntu 源等，受镜像站容量限制，只同步 amd64 指令集的二进制程序。
+
+对于前者，rsync 通常是最合适的选择。
+
+对于后者，我们选择了 apt-mirror 工具，该工具提供了选择性同步功能，并实现了同步的原子性。
+
+### 原子性
+
+仓库由索引文件和资源文件组成，这些文件需要保持一致。
+
+镜像站必须达到如下目标。
+
+| 镜像站的状态   | 版本1 | 版本1升级到版本2 | 版本2 | 版本2升级到版本3 | 版本3 |
+| -------------- | ----- | ---------------- | ----- | ---------------- | ----- |
+| 用户访问的内容 | 版本1 | 版本1            | 版本2 | 版本2            | 版本3 |
+
+即，进行同步时，镜像站需要保留新旧两个版本的内容，并在同步结束时，以非常快的速度完成版本切换。只有这样，才能保证用户使用时不会出错。想象一下，一本书，前一半页码是第1版第1次印刷的内容，后一半则变成了第1版第2次印刷的内容，这样的书显然是无法阅读的。
+
+apt-mirror 工具已经做好了原子性的工作。
+
+rsync 虽然也有 `--delay-updates` `--delete-after` 这样的选项，但从实际体验来看效果并不好，因此，我们姑且认为 rsync 不具备原子性，亲自完成保证原子性的工作。
+
+### 保证原子性
+
+#### 引子
+
+在这之前，我们来探究一个小问题。
+
+假设磁盘上存在一个文件 `/path/to/file`。
+
+不考虑文件权限等问题，只从文件内容的角度来说，以下两种操作是否等价？
+
+```bash
+> /path/to/file
+```
+将空内容写入到该文件中。
+
+```
+rm /path/to/file && touch /path/to/file
+```
+删除该文件，并重建一个空文件。
+
+
+
+看起来，`/path/to/file` 的内容均被清空，似乎是等价的。然而，并不是这样。运行并观察下面的两段代码。
+
+```bash
+echo "foo" > /tmp/file1
+ln -sf /tmp/file1 /tmp/file2
+> /tmp/file2
+cat /tmp/file1
+```
+
+```bash
+echo "foo" > /tmp/file1
+ln -sf /tmp/file1 /tmp/file2
+rm /tmp/file2 && touch /tmp/file2
+cat /tmp/file1
+```
+
+第一段代码，随着`file2` 被清空，`file1`  也同时被清空了。
+
+第二段代码，`file1` 并没有被清空，因为在删除 `file2` 这个文件时，它与 `file1` 的关系被解除了。
+
+PS: 为什么有那么多人认为“Linux 的软链接如同 Windows 的快捷方式”？谬论重复一千遍，也不能变为真理，但是还真有一群傻瓜认为这句话正确，原因仅仅是因为大家都这么说。真正正确的说法是，“Linux 的软链接如同 Windows 的软链接；Linux 的 .desktop 文件如同 Windows 的快捷方式”。
+
+#### 冗余，似乎是必要的代价？
+
+原子性，可用以下流程表示。
+
+
+
+第一步：通过魔法，提供一个目录A的副本，记为目录B。
+第二步：用户或者程序改动目录B。
+第三步：通过魔法，用目录B代替目录A。
+
+
+
+通过以上的步骤，可以保证目录A始终保持一致性。如同显卡的双缓冲机制一样，下一个场景完全准备好了，才能替换上一个场景，以避免画面撕裂的情况，而画面撕裂就是不一致性的表现。
+
+那么，如何实现步骤中的魔法呢？
+
+
+
+**方法一：复制**
+
+效率：低。浪费磁盘空间和复制的时间。
+
+是否保证了原子性：是。
+
+例子：git——用户可以对当前工作区的文件做任何修改，然后 commit 或者 revert。为了保证已经 commit 的数据不丢失，复制一份是必须的。
+
+
+
+**方法二：链接**
+
+方法：链接。硬链接、软链接都行。
+
+效率：高。没有浪费磁盘空间，不需要复制。
+
+是否保证了原子性：**否**。
+
+这是一个不可行的办法。原因很简单，对目录B内文件的操作可以反过来对目录A的文件造成影响。还记得刚才的引子吗？
+
+
+
+你还能想到其他的方法吗？
+
+很遗憾，如果没有其他魔法的支持，复制就是唯一的办法。
+
+#### COW (aka. 写时复制)
+
+btrfs 和 ZFS 文件系统都支持 COW。COW 的意思是，将文件A复制到文件B时，暂时不执行复制动作，而是让两个文件共用一份存储空间。当文件A或B发生改动时，执行复制动作，将两个文件分开。
+
+COW 就是文件系统提供的“魔法”。很显然，COW 只能由文件系统提供支持。
+
+
+
+cp 命令提供了 COW 的支持，使用 `--reflink` 选项控制。例如：
+
+```bash
+cp --reflink=always /path/to/fileA /path/to/fileB
+```
+
+强制使用 COW 进行复制。失败则报错。
+
+```bash
+cp --reflink=auto /path/to/fileA /path/to/fileB
+```
+
+首先尝试 COW 进行复制，失败则会 fallback 到普通复制。
+
+```bash
+cp --reflink=never /path/to/fileA /path/to/fileB
+```
+
+强制使用普通复制。
+
+
+
+将 COW 与普通复制、链接相提并论并不合适，因为 COW 和普通复制的效果一样——产生了一个与母本毫无联系的副本。在用户的眼中，COW 和普通复制是等价的。当然，在系统管理员眼中，COW 节约了时间和空间。
+
+#### 依赖 COW 的原子性脚本
+
+有了 COW，我们可以有效率地保证原子性了。参考如下的脚本。
+
+```bash
+#!/usr/bin/env bash
+
+# 要保证原子性的目录路径，实际上为软链接，在脚本执行前指向 ${DIR_CURRENT}
+DIR=/path/to/dir
+# 当前版本的文件
+DIR_CURRENT=/path/to/dir-current
+# 临时目录，用来存储下一版本的文件
+DIR_NEW=/path/to/dir-new
+
+# 加锁，保证此脚本不会多次执行。此部分略去。
+
+# 将 ${DIR_CURRENT} 复制到 ${DIR_NEW}。强制使用 COW。
+cp --reflink=always "${DIR_CURRENT}" "${DIR_NEW}"
+
+# 执行用户程序，对 ${DIR_NEW} 做任何事情。
+/path/to/some/dirty/work/here "${DIR_NEW}"
+
+# 将软链接指向 ${DIR_NEW}，即切换到新版本。
+ln -sf "${DIR_NEW}" "${DIR}"
+
+# 用 ${DIR_NEW} 取代 ${DIR_CURRENT}
+rm -rf "${DIR_CURRENT}"
+cp --reflink=always "${DIR_NEW}" "${DIR_CURRENT}"
+
+# 将软链接指向 ${DIR_CURRENT}
+ln -sf "${DIR_CURRENT}" "${DIR}"
+rm -rf "${DIR_NEW}"
+
+# 完成
+```
+
+在如上的脚本中，DIR 目录始终保持了原子性。目的达到了。
+
+### systemd 的 service 和 timer
+
+镜像站需要定期执行同步任务。我们不使用老旧的 corntab，而是将同步任务作为 systemd 的服务，并配置合适的定时器来定期执行。举例如下。
+
+`/etc/systemd/system/example-task.service` 文件如下。
+
+```ini
+[Unit]
+Description=Example Task
+After=network.target
+Wants=network.target
+
+[Service]
+Type=simple
+ExecStart=/path/to/example/task
+Restart=no
+
+[Install]
+WantedBy=multi-user.target
+```
+
+`/etc/systemd/system/example-task.timer`文件如下。
+
+```ini
+[Unit]
+Description=Timer for Example Task
+
+[Timer]
+OnCalendar=*-*-* 17:00:00 UTC
+Unit=example-task.service
+
+[Install]
+WantedBy=timers.target
+```
+
+如图所示的定时器会在协调世界时 17 点时启动对应的服务。如果该服务执行的太慢，以至于 24 小时后依然没有结束，那么定时器不会重复启动该服务的第二个实例。
+
+PS: Linux 中的`格林尼治时间`指**格林尼治这个地区的时区**，而不是零时区——别忘了，英国实行夏时制。因此，为了消除歧义，无论是与他人交谈时还是在计算机世界中，永远不使用 `格林尼治时间` 一词，也不要将时区设置为 `Etc/Greenwich`。将服务器的时区设置为 `协调世界时` 即 `Etc/Utc` 是个好习惯。
+
+不要忘了将定时器设置为开机自启，并启动之。
+
+```bash
+systemctl daemon-reload
+systemctl enable example-task.timer
+systemctl start example-task.timer
+```
+
+更多的配置选项可参考 systemd 的文档，不再赘述。
