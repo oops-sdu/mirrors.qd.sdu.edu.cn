@@ -29,7 +29,7 @@ module.exports = {
             ],
             '/blog/': [
                 // '',
-                '2019-4-21.md',
+                'BirthOfYetAnotherMirrorSite.md',
                 'BackendConfigJournal.md'
             ]
         },
