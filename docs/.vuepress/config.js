@@ -15,11 +15,10 @@ module.exports = {
             { text: '帮助', link: '/guide/' },
             { text: '博客', link: '/blog/' }
         ],
-        sidebarDepth: 0,
+        sidebarDepth: 2, // 最大为 2，也就是 h3
         sidebar: {
 
             '/guide/': [
-                // '',
                 "TurnOffRebindProtection.md",
                 'ArchLinux.md',
                 'Ubuntu.md',
@@ -28,14 +27,13 @@ module.exports = {
 
             ],
             '/blog/': [
-                // '',
                 'BirthOfYetAnotherMirrorSite.md',
                 'BackendConfigJournal.md'
             ]
         },
         // activeHeaderLinks: false,
         // 假定是 GitHub. 同时也可以是一个完整的 GitLab URL
-        repo: 'https://github.com/oops-sdu/SDU-Mirrors-Frontend',
+        repo: 'https://github.com/oops-sdu/mirrors.qd.sdu.edu.cn',
         // 自定义仓库链接文字。默认从 `themeConfig.repo` 中自动推断为
         // "GitHub"/"GitLab"/"Bitbucket" 其中之一，或是 "Source"。
         repoLabel: 'GitHub',

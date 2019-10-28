@@ -1,5 +1,5 @@
 ---
-sidebarDepth: 4
+sidebarDepth: 2
 ---
 # 后端配置记录
 

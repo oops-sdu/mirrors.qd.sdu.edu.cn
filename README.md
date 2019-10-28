@@ -1,4 +1,4 @@
-# SDU-Mirrors-Frontend
+# mirrors.qd.sdu.edu.cn
 
 ## build
 
