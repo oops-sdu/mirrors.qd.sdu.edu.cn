@@ -21,8 +21,9 @@ module.exports = {
             '/guide/': [
                 "TurnOffRebindProtection.md",
                 'ArchLinux.md',
-                'Ubuntu.md',
                 'Debian.md',
+                'Ubuntu.md',
+                'lxc-images.md',
                 'Windows-iso.md'
 
             ],
