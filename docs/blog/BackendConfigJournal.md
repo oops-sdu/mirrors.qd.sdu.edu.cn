@@ -333,10 +333,16 @@ apt install lxc
 ##### 创建一个名为 NAME 的容器
 
 ```bash
-lxc-create -n NAME -t download -- --server mirrors.tuna.tsinghua.edu.cn/lxc-images --keyserver=hkp://keyserver.ubuntu.com:80 --arch amd64
+lxc-create -n NAME -t download -- --server mirrors.tuna.tsinghua.edu.cn/lxc-images --keyserver=hkp://keyserver.ubuntu.com:80
 ```
 
-注意，这里使用了清华源作为 lxc-images 的上游仓库。但是截至本文编写时（2019 年 5 月），清华源的 lxc-images 存在严重的索引提前于内容同步完成的情况，因此如果报错 404，请将 `--server mirrors.tuna.tsinghua.edu.cn/lxc-images` 部分删除，使用官方源。
+2019 年 5 月注：这里使用了清华大学开源软件镜像站作为 lxc-images 的上游仓库。但是截至本文编写时（2019 年 5 月），清华大学开源软件镜像站的 lxc-images 存在严重的索引提前于内容同步完成的情况，因此如果报错 404，请将 `--server mirrors.tuna.tsinghua.edu.cn/lxc-images` 部分删除，使用官方源。
+
+2019 年 12 月注：截至目前，清华大学开源软件镜像站的 lxc-images 依然存在严重的索引提前于内容同步完成的情况。山东大学镜像站已提供 lxc-images 的[可靠镜像](/guide/lxc-images.html)。可改为以下命令。
+
+```bash
+lxc-create -n NAME -t download -- --server intranet.mirrors.oops-sdu.cn/lxc-images --no-validate
+```
 
 ##### 启停容器、进入容器
 
