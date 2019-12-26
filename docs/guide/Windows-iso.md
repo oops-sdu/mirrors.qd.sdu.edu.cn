@@ -51,22 +51,22 @@ sidebarDepth: 2
 - CRC32: A592906A
 
 
-### [1903] Windows 10 China Get Genuine
+### [1909] Windows 10 China Get Genuine
 
 如果您的电脑在中国大陆销售，且由 OEM 预装了正版的 Windows 10，请选择此版本，无需输入序列号，联网即可识别为正版。
 
 #### 更新日期
-2019年4月
+2019年10月
 
 #### 包含的版本
 - Windows 10 家庭中文版 (OEM 版)
 
 #### 下载
-- 文件: [Win10_1903_V1_China_GGK_Chinese(Simplified)_x64.iso](//intranet.mirrors.oops-sdu.cn/windows-iso/iso/Win10_1903_V1_China_GGK_Chinese(Simplified)_x64.iso)
-- 大小: 4567844864 字节
-- MD5: E6C959BD5014C3FF7E36E506EEB4DE07
-- SHA1: 6DE2F7969A85146B2FBBA10C971B6C842779369B
-- CRC32: 1D7A4186
+- 文件: [Win10_1909_China_GGK_Chinese(Simplified)_x64.iso](//intranet.mirrors.oops-sdu.cn/windows-iso/iso/Win10_1909_China_GGK_Chinese(Simplified)_x64.iso)
+- 大小: 5021913088 字节
+- MD5: 73117D41C6482975F711607FF9A69DCE
+- SHA1: AB1B2FDA3A75BC71E494B683813604D01582B8D0
+- CRC32: EC40E8B6
 
 ## Windows 10 长期服务分支
 
