@@ -1,5 +1,6 @@
 module.exports = {
     base: '/',
+    lang: 'zh-CN',
     title: '山东大学镜像站',
     // description: 'Just playing around',
     head: [
