@@ -72,7 +72,7 @@ sidebarDepth: 2
 
 ### Windows 10 Enterprise LTSC 2019
 
-如果您的电脑通过[山东大学微软正版软件管理运营平台](http://softms.sdu.edu.cn)授权，可选择此版本，并运行平台提供的程序以完成激活。
+如果您的电脑通过[山东大学微软正版软件管理运营平台](http://softms.sdu.edu.cn)授权，可选择此版本，并运行平台提供的程序以完成激活。不过，截至目前（2020年5月），由于山东大学的 KMS 服务器所在 Windows Server 并未更新到最新版本，不包含 LTSB/LTSC 版本的激活信息，可能无法成功激活。
 
 #### 更新日期
 2018年10月
@@ -96,7 +96,7 @@ sidebarDepth: 2
 - Windows 10 企业版 LTSB 2016
 
 #### 下载
-如果您的电脑通过[山东大学微软正版软件管理运营平台](http://softms.sdu.edu.cn)授权，可选择此版本，并运行平台提供的程序以完成激活。
+如果您的电脑通过[山东大学微软正版软件管理运营平台](http://softms.sdu.edu.cn)授权，可选择此版本，并运行平台提供的程序以完成激活。不过，截至目前（2020年5月），由于山东大学的 KMS 服务器所在 Windows Server 并未更新到最新版本，不包含 LTSB/LTSC 版本的激活信息，可能无法成功激活。
 
 - 文件: [cn_windows_10_enterprise_2016_ltsb_x64_dvd_9060409.iso](//intranet.mirrors.oops-sdu.cn/windows-iso/iso/cn_windows_10_enterprise_2016_ltsb_x64_dvd_9060409.iso)
 - 大小: 3821895680 字节
