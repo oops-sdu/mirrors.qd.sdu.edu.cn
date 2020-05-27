@@ -12,5 +12,5 @@ lxc-images 仓库被 LXC 用于容器内操作系统的部署。截至目前（2
 创建一个名为 `NAME` 的容器。
 
 ```bash
-lxc-create -n NAME -t download -- --server intranet.mirrors.oops-sdu.cn/lxc-images --no-validate
+lxc-create -n NAME -t download -- --server mirrors.qd.sdu.edu.cn/lxc-images --no-validate
 ```

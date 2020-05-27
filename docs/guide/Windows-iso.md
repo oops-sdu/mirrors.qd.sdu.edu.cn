@@ -22,7 +22,7 @@ sidebarDepth: 2
 - Windows 10 专业工作站版 (批量授权版)
 
 #### 下载
-- 文件: [cn_windows_10_business_editions_version_1909_x64_dvd_0ca83907.iso](//intranet.mirrors.oops-sdu.cn/windows-iso/iso/cn_windows_10_business_editions_version_1909_x64_dvd_0ca83907.iso)
+- 文件: [cn_windows_10_business_editions_version_1909_x64_dvd_0ca83907.iso](//mirrors.qd.sdu.edu.cn/windows-iso/iso/cn_windows_10_business_editions_version_1909_x64_dvd_0ca83907.iso)
 - 大小: 5275090944 字节
 - MD5: 3CDF928B973D49552644B9117A8BF67C
 - SHA1: A153526CDD406A249A93F30B447B259FED560C1D
@@ -44,7 +44,7 @@ sidebarDepth: 2
 - Windows 10 专业工作站版 (零售版)
 
 #### 下载
-- 文件: [cn_windows_10_consumer_editions_version_1909_x64_dvd_76365bf8.iso](//intranet.mirrors.oops-sdu.cn/windows-iso/iso/cn_windows_10_consumer_editions_version_1909_x64_dvd_76365bf8.iso)
+- 文件: [cn_windows_10_consumer_editions_version_1909_x64_dvd_76365bf8.iso](//mirrors.qd.sdu.edu.cn/windows-iso/iso/cn_windows_10_consumer_editions_version_1909_x64_dvd_76365bf8.iso)
 - 大小: 5381154816 字节
 - MD5: E4166793CED132CE90494CD51CA51F51
 - SHA1: 5F3C8E743C9E87BDEFDAABB49BBD0D7AA9221E7A
@@ -62,7 +62,7 @@ sidebarDepth: 2
 - Windows 10 家庭中文版 (OEM 版)
 
 #### 下载
-- 文件: [Win10_1909_China_GGK_Chinese(Simplified)_x64.iso](//intranet.mirrors.oops-sdu.cn/windows-iso/iso/Win10_1909_China_GGK_Chinese(Simplified)_x64.iso)
+- 文件: [Win10_1909_China_GGK_Chinese(Simplified)_x64.iso](//mirrors.qd.sdu.edu.cn/windows-iso/iso/Win10_1909_China_GGK_Chinese(Simplified)_x64.iso)
 - 大小: 5021913088 字节
 - MD5: 73117D41C6482975F711607FF9A69DCE
 - SHA1: AB1B2FDA3A75BC71E494B683813604D01582B8D0
@@ -81,7 +81,7 @@ sidebarDepth: 2
 - Windows 10 企业版 LTSC 2019
 
 #### 下载
-- 文件: [cn_windows_10_enterprise_ltsc_2019_x64_dvd_d17070a8.iso](//intranet.mirrors.oops-sdu.cn/windows-iso/iso/cn_windows_10_enterprise_ltsc_2019_x64_dvd_d17070a8.iso)
+- 文件: [cn_windows_10_enterprise_ltsc_2019_x64_dvd_d17070a8.iso](//mirrors.qd.sdu.edu.cn/windows-iso/iso/cn_windows_10_enterprise_ltsc_2019_x64_dvd_d17070a8.iso)
 - 大小: 4290967552 字节
 - MD5: 122A3B1C2664D4A06CA926EBEC46F509
 - SHA1: C0B4704E1336281C98A91438C7DF0F14B8F41E46
@@ -98,7 +98,7 @@ sidebarDepth: 2
 #### 下载
 如果您的电脑通过[山东大学微软正版软件管理运营平台](http://softms.sdu.edu.cn)授权，可选择此版本，并运行平台提供的程序以完成激活。不过，截至目前（2020年5月），由于山东大学的 KMS 服务器所在 Windows Server 并未更新到最新版本，不包含 LTSB/LTSC 版本的激活信息，可能无法成功激活。
 
-- 文件: [cn_windows_10_enterprise_2016_ltsb_x64_dvd_9060409.iso](//intranet.mirrors.oops-sdu.cn/windows-iso/iso/cn_windows_10_enterprise_2016_ltsb_x64_dvd_9060409.iso)
+- 文件: [cn_windows_10_enterprise_2016_ltsb_x64_dvd_9060409.iso](//mirrors.qd.sdu.edu.cn/windows-iso/iso/cn_windows_10_enterprise_2016_ltsb_x64_dvd_9060409.iso)
 - 大小: 3821895680 字节
 - MD5: 0343DC55184A406AF9A8AB0D964CCCC6
 - SHA1: 9E405E950890D2A196565BCA35E152F9CFAD296D
@@ -106,7 +106,7 @@ sidebarDepth: 2
 
 ## 微PE工具箱
 - 官网地址: [www.wepe.com.cn](http://www.wepe.com.cn/)
-- 文件: [WePE_64_V2.0.exe](//intranet.mirrors.oops-sdu.cn/windows-iso/iso/WePE_64_V2.0.exe)
+- 文件: [WePE_64_V2.0.exe](//mirrors.qd.sdu.edu.cn/windows-iso/iso/WePE_64_V2.0.exe)
 - 大小: 217464180 字节
 - MD5: 3B54C31B9A9F9BB1E7AEF29EE65DDD93
 - SHA1: C2648E0A0003681102F1D790EAC93CA2978CD91E

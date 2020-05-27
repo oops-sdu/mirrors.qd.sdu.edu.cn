@@ -13,9 +13,9 @@ sidebarDepth: 1
 Debian 10 (buster) 用户请将 `/etc/apt/sources.list` 文件改为以下内容：
 
 ```
-deb http://intranet.mirrors.oops-sdu.cn/debian buster main contrib non-free
-deb http://intranet.mirrors.oops-sdu.cn/debian-security buster/updates main contrib non-free
-deb http://intranet.mirrors.oops-sdu.cn/debian buster-updates main contrib non-free
+deb http://mirrors.qd.sdu.edu.cn/debian buster main contrib non-free
+deb http://mirrors.qd.sdu.edu.cn/debian-security buster/updates main contrib non-free
+deb http://mirrors.qd.sdu.edu.cn/debian buster-updates main contrib non-free
 ```
 
 ## 一点小提示
