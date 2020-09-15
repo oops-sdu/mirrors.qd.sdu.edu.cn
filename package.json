@@ -8,7 +8,7 @@
     },
     "license": "MIT",
     "dependencies": {
-        "axios": "^0.18.0",
-        "vuepress": "^1.0.0-alpha.47"
+        "axios": "^0.20.0",
+        "vuepress": "^1.5.4"
     }
 }

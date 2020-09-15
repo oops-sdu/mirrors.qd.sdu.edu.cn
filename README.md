@@ -2,13 +2,13 @@
 
 ## build
 
-    yarn install
-    yarn build
+    npm install
+    npm run build
 
 ## dev
 
-    yarn install
-    yarn dev
+    npm install
+    npm run dev
     
 ## deploy
 
