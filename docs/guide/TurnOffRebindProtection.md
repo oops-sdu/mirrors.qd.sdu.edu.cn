@@ -13,7 +13,7 @@ dnsmasq 默认不开启 rebind protection 功能，但官方版本的 OpenWRT �
 
 ## 如何确定是否需要关闭此功能？
 
-在山东大学校园网环境下，如果 `mirrors.qd.sdu.edu.cn` 和 `intranet.mirrors.oops-sdu.net` 至少有一个可访问，则表示当前 rebind protection 并未开启，反之亦然。
+在山东大学校园网环境下，如果出现浏览器不能访问 `mirrors.qd.sdu.edu.cn` ，但可以访问 `10.102.7.58`（即前述域名对应的 A 记录）的情况，则表示当前 rebind protection 并未开启，需要关闭此功能。
 
 ## 如何关闭此功能？
 
