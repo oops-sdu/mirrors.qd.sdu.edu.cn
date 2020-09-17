@@ -7,12 +7,9 @@ sidebarDepth: 2
 
 ## Windows 10 半年频道
 
-### [1909] Windows 10 Business
+### Windows 10 Business
 
 如果您的电脑通过[山东大学微软正版软件管理运营平台](http://softms.sdu.edu.cn)授权，可选择此版本，并运行平台提供的程序以完成激活。
-
-#### 更新日期
-2019年10月
 
 #### 包含的版本
 - Windows 10 教育版 (批量授权版)
@@ -22,18 +19,11 @@ sidebarDepth: 2
 - Windows 10 专业工作站版 (批量授权版)
 
 #### 下载
-- 文件: [cn_windows_10_business_editions_version_1909_x64_dvd_0ca83907.iso](http://mirrors.qd.sdu.edu.cn/windows-iso/iso/cn_windows_10_business_editions_version_1909_x64_dvd_0ca83907.iso)
-- 大小: 5275090944 字节
-- MD5: 3CDF928B973D49552644B9117A8BF67C
-- SHA1: A153526CDD406A249A93F30B447B259FED560C1D
-- CRC32: AEF9E461
+[http://mirrors.qd.sdu.edu.cn/windows-iso/iso/Business/](http://mirrors.qd.sdu.edu.cn/windows-iso/iso/Business/)
 
-### [1909] Windows 10 Customer
+### Windows 10 Customer
 
-如果您的电脑通过“Windows 10 易升”升级到 Windows 10，请选择此版本，无需输入序列号，联网即可识别为正版。
-
-#### 更新日期
-2019年10月
+如果您的电脑通过“Windows 10 易升”从 Windows 8 升级到 Windows 10，请选择此版本，无需输入序列号，联网即可识别为正版。
 
 #### 包含的版本
 - Windows 10 家庭版 (零售版)
@@ -44,29 +34,19 @@ sidebarDepth: 2
 - Windows 10 专业工作站版 (零售版)
 
 #### 下载
-- 文件: [cn_windows_10_consumer_editions_version_1909_x64_dvd_76365bf8.iso](http://mirrors.qd.sdu.edu.cn/windows-iso/iso/cn_windows_10_consumer_editions_version_1909_x64_dvd_76365bf8.iso)
-- 大小: 5381154816 字节
-- MD5: E4166793CED132CE90494CD51CA51F51
-- SHA1: 5F3C8E743C9E87BDEFDAABB49BBD0D7AA9221E7A
-- CRC32: A592906A
+[http://mirrors.qd.sdu.edu.cn/windows-iso/iso/Consumer/](http://mirrors.qd.sdu.edu.cn/windows-iso/iso/Consumer/)
 
 
-### [1909] Windows 10 China Get Genuine
+### Windows 10 China Get Genuine
 
 如果您的电脑在中国大陆销售，且由 OEM 预装了正版的 Windows 10，请选择此版本，无需输入序列号，联网即可识别为正版。
-
-#### 更新日期
-2019年10月
 
 #### 包含的版本
 - Windows 10 家庭中文版 (OEM 版)
 
 #### 下载
-- 文件: [Win10_1909_China_GGK_Chinese(Simplified)_x64.iso](http://mirrors.qd.sdu.edu.cn/windows-iso/iso/Win10_1909_China_GGK_Chinese(Simplified)_x64.iso)
-- 大小: 5021913088 字节
-- MD5: 73117D41C6482975F711607FF9A69DCE
-- SHA1: AB1B2FDA3A75BC71E494B683813604D01582B8D0
-- CRC32: EC40E8B6
+[http://mirrors.qd.sdu.edu.cn/windows-iso/iso/China/](http://mirrors.qd.sdu.edu.cn/windows-iso/iso/China/)
+
 
 ## Windows 10 长期服务分支
 
@@ -81,7 +61,7 @@ sidebarDepth: 2
 - Windows 10 企业版 LTSC 2019
 
 #### 下载
-- 文件: [cn_windows_10_enterprise_ltsc_2019_x64_dvd_d17070a8.iso](http://mirrors.qd.sdu.edu.cn/windows-iso/iso/cn_windows_10_enterprise_ltsc_2019_x64_dvd_d17070a8.iso)
+- 文件: [cn_windows_10_enterprise_ltsc_2019_x64_dvd_d17070a8.iso](http://mirrors.qd.sdu.edu.cn/windows-iso/iso/LTSC/cn_windows_10_enterprise_ltsc_2019_x64_dvd_d17070a8.iso)
 - 大小: 4290967552 字节
 - MD5: 122A3B1C2664D4A06CA926EBEC46F509
 - SHA1: C0B4704E1336281C98A91438C7DF0F14B8F41E46
@@ -98,7 +78,7 @@ sidebarDepth: 2
 #### 下载
 如果您的电脑通过[山东大学微软正版软件管理运营平台](http://softms.sdu.edu.cn)授权，可选择此版本，并运行平台提供的程序以完成激活。不过，截至目前（2020年5月），由于山东大学的 KMS 服务器所在 Windows Server 并未更新到最新版本，不包含 LTSB/LTSC 版本的激活信息，可能无法成功激活。
 
-- 文件: [cn_windows_10_enterprise_2016_ltsb_x64_dvd_9060409.iso](http://mirrors.qd.sdu.edu.cn/windows-iso/iso/cn_windows_10_enterprise_2016_ltsb_x64_dvd_9060409.iso)
+- 文件: [cn_windows_10_enterprise_2016_ltsb_x64_dvd_9060409.iso](http://mirrors.qd.sdu.edu.cn/windows-iso/iso/LTSC/cn_windows_10_enterprise_2016_ltsb_x64_dvd_9060409.iso)
 - 大小: 3821895680 字节
 - MD5: 0343DC55184A406AF9A8AB0D964CCCC6
 - SHA1: 9E405E950890D2A196565BCA35E152F9CFAD296D
@@ -106,11 +86,7 @@ sidebarDepth: 2
 
 ## 微PE工具箱
 - 官网地址: [www.wepe.com.cn](http://www.wepe.com.cn/)
-- 文件: [WePE_64_V2.0.exe](http://mirrors.qd.sdu.edu.cn/windows-iso/iso/WePE_64_V2.0.exe)
-- 大小: 217464180 字节
-- MD5: 3B54C31B9A9F9BB1E7AEF29EE65DDD93
-- SHA1: C2648E0A0003681102F1D790EAC93CA2978CD91E
-- CRC32: 7FE5E2C4
+- 文件: [WePE_64_V2.1.exe](http://mirrors.qd.sdu.edu.cn/windows-iso/iso/WePE/WePE_64_V2.1.exe) 
 
 ## 常见问题 FAQ
 ### <a name="faq-how-to-install"></a>1. 如何安装 Windows，以及注意事项？
@@ -136,5 +112,5 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Power" /v Hiberbo
 ```
 
 - 注: 为什么不推荐直接将 Windows 安装镜像写入 U 盘？
-  由于 install.wim 文件已经超过 4 GiB，使用 `rufus` 或者 `UltraISO` 软件可能会将 U 盘格式化为 NTFS 格式，并不是所有主板都支持在上面启动，尤其是 UEFI 引导。
+  由于 install.wim 文件已经超过 4 GiB，使用 `UltraISO` 软件可能会将 U 盘格式化为 NTFS 格式，并不是所有主板都支持在上面启动，尤其是 UEFI 引导。使用 `rufus` 软件写入 U 盘会采用多分区方案来规避此限制，但需要主板关闭安全启动。
   此外，Windows 的安装镜像并非 Hybrid ISO，因此你无法使用 `dd` 或者 `Win32DiskImager` 将其写入 U 盘。
