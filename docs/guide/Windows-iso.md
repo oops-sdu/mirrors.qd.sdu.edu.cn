@@ -21,7 +21,7 @@ sidebarDepth: 2
 #### 下载
 [http://mirrors.qd.sdu.edu.cn/windows-iso/iso/Business/](http://mirrors.qd.sdu.edu.cn/windows-iso/iso/Business/)
 
-### Windows 10 Customer
+### Windows 10 Consumer
 
 如果您的电脑通过“Windows 10 易升”从 Windows 8 升级到 Windows 10，请选择此版本，无需输入序列号，联网即可识别为正版。
 
