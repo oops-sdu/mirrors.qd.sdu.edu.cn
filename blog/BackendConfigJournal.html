@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>后端配置记录 | 山东大学镜像站</title>
+    <meta name="generator" content="VuePress 1.5.4">
+    <link rel="icon" href="/favicon.ico">
+    <meta name="description" content="">
+    <meta name="renderer" content="webkit">
+    <link rel="preload" href="/assets/css/0.styles.fcae68d8.css" as="style"><link rel="preload" href="/assets/js/app.db05cd12.js" as="script"><link rel="preload" href="/assets/js/2.25301b25.js" as="script"><link rel="preload" href="/assets/js/10.27382cff.js" as="script"><link rel="prefetch" href="/assets/js/11.0d10567f.js"><link rel="prefetch" href="/assets/js/12.138c298e.js"><link rel="prefetch" href="/assets/js/13.a01e77aa.js"><link rel="prefetch" href="/assets/js/14.26e26ed0.js"><link rel="prefetch" href="/assets/js/15.6beb1cc7.js"><link rel="prefetch" href="/assets/js/16.c43b1f39.js"><link rel="prefetch" href="/assets/js/17.ffc17709.js"><link rel="prefetch" href="/assets/js/18.5bf1ffa9.js"><link rel="prefetch" href="/assets/js/3.92b77e97.js"><link rel="prefetch" href="/assets/js/4.45cd2963.js"><link rel="prefetch" href="/assets/js/5.eea08fae.js"><link rel="prefetch" href="/assets/js/6.e34dce28.js"><link rel="prefetch" href="/assets/js/7.420259bb.js"><link rel="prefetch" href="/assets/js/8.5cc8923a.js"><link rel="prefetch" href="/assets/js/9.7bddbf73.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.fcae68d8.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">山东大学镜像站</span></a> <div class="links"><!----> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><a href="/guide/" class="nav-link">
+  帮助
+</a></div><div class="nav-item"><a href="/blog/" class="nav-link router-link-active">
+  博客
+</a></div> <a href="https://github.com/oops-sdu/mirrors.qd.sdu.edu.cn" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><a href="/guide/" class="nav-link">
+  帮助
+</a></div><div class="nav-item"><a href="/blog/" class="nav-link router-link-active">
+  博客
+</a></div> <a href="https://github.com/oops-sdu/mirrors.qd.sdu.edu.cn" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <ul class="sidebar-links"><li><a href="/blog/BirthOfYetAnotherMirrorSite.html" class="sidebar-link">一个镜像站的诞生</a></li><li><a href="/blog/BackendConfigJournal.html" aria-current="page" class="active sidebar-link">后端配置记录</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/BackendConfigJournal.html#lxc-容器方案" class="sidebar-link">LXC 容器方案</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/BackendConfigJournal.html#为什么选择-lxc" class="sidebar-link">为什么选择 LXC？</a></li><li class="sidebar-sub-header"><a href="/blog/BackendConfigJournal.html#lxc-主机应该选用什么发行版" class="sidebar-link">LXC 主机应该选用什么发行版？</a></li><li class="sidebar-sub-header"><a href="/blog/BackendConfigJournal.html#lxc-容器应该选用什么发行版" class="sidebar-link">LXC 容器应该选用什么发行版？</a></li><li class="sidebar-sub-header"><a href="/blog/BackendConfigJournal.html#lxc-主机的主要配置过程" class="sidebar-link">LXC 主机的主要配置过程</a></li></ul></li><li class="sidebar-sub-header"><a href="/blog/BackendConfigJournal.html#镜像同步方案" class="sidebar-link">镜像同步方案</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/BackendConfigJournal.html#工具选择" class="sidebar-link">工具选择</a></li><li class="sidebar-sub-header"><a href="/blog/BackendConfigJournal.html#原子性" class="sidebar-link">原子性</a></li><li class="sidebar-sub-header"><a href="/blog/BackendConfigJournal.html#保证原子性" class="sidebar-link">保证原子性</a></li><li class="sidebar-sub-header"><a href="/blog/BackendConfigJournal.html#systemd-的-service-和-timer" class="sidebar-link">systemd 的 service 和 timer</a></li></ul></li></ul></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="后端配置记录"><a href="#后端配置记录" class="header-anchor">#</a> 后端配置记录</h1> <h2 id="lxc-容器方案"><a href="#lxc-容器方案" class="header-anchor">#</a> LXC 容器方案</h2> <h3 id="为什么选择-lxc"><a href="#为什么选择-lxc" class="header-anchor">#</a> 为什么选择 LXC？</h3> <p>无论是搭建镜像站，还是其他服务，首要的任务是实现功能，其次是保证稳定，有余力则追求美观。</p> <p>因此，在单一 Linux 发行版上部署所有服务是十分不明智的做法。例如，激进的发行版提供更多、更新的软件包，而保守的发行版则具有更好的稳定性。此外，在保守发行版上编译安装新程序的做法则显得十分愚蠢——应尽可能选择通过发行版的官方仓库来部署服务，否则稳定性就是无稽之谈。容器级虚拟化就是用来调和两者矛盾的方案。</p> <p>为此，我们选择了基于 LXC 的容器方案。LXC 在 2008 年诞生，目的是在共享主机内核的基础上，提供虚拟容器，每个容器运行一个完整的操作系统。与 Docker 相比，一个容器不必仅运行单一服务，因此可根据功能划分容器，便于管理；LXC 主机非常“干净”，除了提供 LXC 管理工具及网络外，无需参与任何具体的任务逻辑，因此具有更强的健壮性——尤其是这台服务器没有 IPMI、没有控制台，唯一的控制方式就是 SSH 时，主机的稳定性就更显得重要了。</p> <h3 id="lxc-主机应该选用什么发行版"><a href="#lxc-主机应该选用什么发行版" class="header-anchor">#</a> LXC 主机应该选用什么发行版？</h3> <p>对于 LXC 主机而言，稳定是第一要素。RHEL/CentOS 7 虽然在稳定性方面广受赞誉，但 Linux 3.10 内核与 LXC 1.0 工具集则显得力不从心。理论上，你可以用低版本内核运行原本为高版本内核准备的发行版容器，但实际应用中会导致诸多的小问题，如容器无法开机、DNS 解析发生阻塞等。在经过初步尝试后，RHEL/CentOS 7 确实无法胜任 LXC 主机的角色，被首先排除。CentOS 8 的发布遥遥无期，不做考虑。</p> <p>由于 LXC 主机要做的事情很简单，ArchLinux 或许可以保证稳定运行。但过于激进的发行版应放在最后考虑。</p> <p>作为老牌 Linux 发行版，Debian 拥有不输 RHEL/CentOS 的稳定性，同时内核较新，是容器级虚拟化的理想选择。截至本文编写时（2019 年 5 月），稳定版对应了搭载 4.9 内核的 Debian 9，而搭载了 4.19 内核的 Debian 10 刚刚进入 RC 阶段，软件包版本已基本冻结。不要因为“非正式版”就将 Debian 10 排除在外，这条可能对于其他发行版适用，但 Debian 即使是 unstable 版本也有不输 Ubuntu 的稳定性。</p> <p>由于 4.9 内核搭配高于 4.9 内核的发行版容器时仍会出现 DNS 解析阻塞问题，因此即使 Debian 10 正式发布还需要数月，我们仍然选择了 Debian 10。</p> <h3 id="lxc-容器应该选用什么发行版"><a href="#lxc-容器应该选用什么发行版" class="header-anchor">#</a> LXC 容器应该选用什么发行版？</h3> <p>容器的发行版主要根据要实现的功能决定。例如，对于 HTTP 服务器，由于镜像站主要在内网运行，我们暂不关心 TLS 1.3，因此选择了 CentOS 7 发行版。同步程序以 Python 脚本、rsync 等为主，选择范围较广，考虑到 apt-mirror 工具，我们选择了与主机相同的 Debian 10 发行版。对于前端代码，我们选择了 ArchLinux，以便使用最新版的 nodejs 和 yarn 等工具。重复一遍，官方源的软件是最稳定的，其次是可靠的第三方源，而编译安装则是最愚蠢的行为——但 Docker 用户请忽略这句话。</p> <h3 id="lxc-主机的主要配置过程"><a href="#lxc-主机的主要配置过程" class="header-anchor">#</a> LXC 主机的主要配置过程</h3> <h4 id="安装-debian-10"><a href="#安装-debian-10" class="header-anchor">#</a> 安装 Debian 10</h4> <h5 id="获取镜像"><a href="#获取镜像" class="header-anchor">#</a> 获取镜像</h5> <p>截至本文编写时（2019 年 5 月），Debian 10 尚未正式发行，因此 Debian 9 的镜像更易获取。虽然每周构建版本的 Debian 10 依然可用，但受限于下载速度，我们选择了先安装 Debian 9 再升级到 Debian 10 的做法。</p> <p>注：不知出于何种原因，我们的虚拟机提供方仅愿意预装 CentOS 7——巧妇难为无米之炊。在仅有 SSH 的前提下，我们选择了对最开头 1GiB 的 boot 分区解除挂载，然后将预先制作好的磁盘镜像 dd 到硬盘开头的做法来更换操作系统。但出于方便读者的考虑，在下文的叙述中，仍假设可以直接从光盘安装 Debian。</p> <p>将 Debian 的光盘插入服务器，进入安装界面。</p> <h5 id="硬盘分区"><a href="#硬盘分区" class="header-anchor">#</a> 硬盘分区</h5> <p>对系统磁盘分区时，根据服务器是否支持 UEFI 启动，选择 GUID 分区表（GPT）或 MBR 分区表。</p> <p>对于 GUID 分区表（GPT），首先创建一个 500 MB 左右的 EFI 系统分区（ESP），格式化为 FAT32（唯一被 UEFI 标准支持的文件系统），挂载到 <code>/boot/efi</code>。然后将剩余的空间全部分配给一个主分区，挂载到 <code>/</code>。</p> <p>对于 MBR 分区表，则可选择将全部的空间分配给一个主分区（设为活动分区），挂载到 <code>/</code>。也可选择创建一个 500 MB 左右的主分区（设为活动分区），不格式化，然后将剩余的空间全部分配给一个主分区，挂载到 <code>/</code>（不是活动分区）。MBR 分区表的 <code>扩展分区</code> <code>逻辑分区</code>的设计是极其糟糕的，因此只需要使用主分区即可。</p> <p>注意，均不分配 SWAP 分区。SWAP 分区的优势是保证交换空间在存储设备上的连续性，以便加速访问。然而，对于固态硬盘而言，位置连续没有意义。即便是对于机械硬盘，由于 SWAP 文件一般是在分区基本为空的情况下创建的，只要不改变 SWAP 文件的大小——SWAP 分区本来就做不到这一点——也不会产生碎片。Ubuntu 从 18.04 桌面版开始，默认使用 SWAP 文件代替了 SWAP 分区。因此，在大多数场景下，应使用 SWAP 文件而不是 SWAP 分区。</p> <p>对于数据磁盘，一律使用 GUID 分区表。牢记，好习惯是，在一台机器上最多只有一个磁盘是 MBR 分区表，即在服务器不支持 UEFI 启动时系统盘可选择 MBR。除了系统盘外的其他磁盘一律不要使用 MBR 分区表，否则无论是对引导还是分区管理都没有好处。</p> <h5 id="组件选择"><a href="#组件选择" class="header-anchor">#</a> 组件选择</h5> <p>不要选择桌面环境。LXC 主机的软件包应尽可能地少，软件包越少，系统越稳定，此外也有利于减少攻击面。记得选择 SSH Server，或者也可以等到后期再安装。</p> <h5 id="安装-grub-引导器"><a href="#安装-grub-引导器" class="header-anchor">#</a> 安装 grub 引导器</h5> <p>Debian 安装程序会提示你该将 grub 安装至何处。对于 MBR 分区表，应将 Grub 安装在系统磁盘的活动分区上。（一个 MBR 磁盘上只能有一个或零个活动分区，且活动分区一定是主分区。）对于 GUID 分区表，将其安装在 <code>EFI 系统分区</code>（ESP）即可。</p> <h5 id="升级到-debian-10"><a href="#升级到-debian-10" class="header-anchor">#</a> 升级到 Debian 10</h5> <p>Debian 的大版本升级很简单，只要将 <code>/etc/apt/sources.list</code> 中的发行版代号由 Debian 9 的 <code>stretch</code> 替换为 Debian 10 的 <code>buster</code>，然后执行 <code>apt update &amp;&amp; apt dist-upgrade</code> 即可。中途要注意文件替换的问题，不要无脑 yes，以免配置文件被新版缺省配置文件覆盖。</p> <h5 id="安装基本软件"><a href="#安装基本软件" class="header-anchor">#</a> 安装基本软件</h5> <p>安装以下基本软件。不再单独强调。</p> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token function">apt</span> <span class="token function">install</span> <span class="token function">screen</span> tmux <span class="token function">wget</span> <span class="token function">nano</span> <span class="token function">curl</span> <span class="token function">sudo</span>
+</code></pre></div><h4 id="网络配置"><a href="#网络配置" class="header-anchor">#</a> 网络配置</h4> <h5 id="更换网络管理器为-systemd-networkd"><a href="#更换网络管理器为-systemd-networkd" class="header-anchor">#</a> 更换网络管理器为 systemd-networkd</h5> <p>systemd-networkd 是主要适用于有线网络的网络管理器，与 NetworkManager 相比更简单，与传统的网络配置脚本相比更现代化。我们推荐在服务器上使用 systemd-networkd，以便为 LXC 容器提供更简单的网络设置。</p> <h6 id="创建配置文件"><a href="#创建配置文件" class="header-anchor">#</a> 创建配置文件</h6> <p><code>/etc/systemd/network</code> 是 systemd-networkd 的配置文件所在目录。创建一个 <code>10-wired.network</code> 文件，内容为：</p> <div class="language-ini extra-class"><pre class="language-ini"><code><span class="token selector">[Match]</span>
+<span class="token constant">Name</span><span class="token attr-value"><span class="token punctuation">=</span>e*</span>
+
+<span class="token selector">[Network]</span>
+<span class="token constant">DHCP</span><span class="token attr-value"><span class="token punctuation">=</span>no</span>
+<span class="token constant">Address</span><span class="token attr-value"><span class="token punctuation">=</span>10.102.7.58/23</span>
+<span class="token constant">Gateway</span><span class="token attr-value"><span class="token punctuation">=</span>10.102.7.254</span>
+<span class="token constant">DNS</span><span class="token attr-value"><span class="token punctuation">=</span>114.114.114.114</span>
+
+<span class="token selector">[Link]</span>
+<span class="token constant">MTUBytes</span><span class="token attr-value"><span class="token punctuation">=</span>1428</span>
+</code></pre></div><p>一目了然，无需多言。</p> <h6 id="禁用-debian-默认的网络管理器"><a href="#禁用-debian-默认的网络管理器" class="header-anchor">#</a> 禁用 Debian 默认的网络管理器</h6> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">mv</span> /etc/network/interfaces /etc/network/interfaces.bak
+systemctl stop networking
+systemctl disable networking
+</code></pre></div><p>根据安装时选择的软件包不同，NetworkManager 可能也被安装。卸载之。</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">apt</span> remove network-manager
+</code></pre></div><h6 id="启动-systemd-networkd"><a href="#启动-systemd-networkd" class="header-anchor">#</a> 启动 systemd-networkd</h6> <div class="language-shell extra-class"><pre class="language-shell"><code>systemctl start systemd-networkd
+systemctl <span class="token builtin class-name">enable</span> systemd-networkd
+</code></pre></div><h6 id="重启系统以验证设置"><a href="#重启系统以验证设置" class="header-anchor">#</a> 重启系统以验证设置</h6> <div class="language-bash extra-class"><pre class="language-bash"><code>systemctl <span class="token function">reboot</span>
+</code></pre></div><p>注意，如果配置不正确，SSH 将无法连接。请确保有备用手段可以连接主机。</p> <p>在极端情况下，可考虑手动为其分配 IP 地址使其重新联网。假设网络接口名称为 <code>ens192</code>，以下命令会相当有用。</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">ip</span> a <span class="token comment"># 查看 IP 地址</span>
+<span class="token function">ip</span> r <span class="token comment"># 查看路由表</span>
+<span class="token function">ip</span> n <span class="token comment"># 查看 ARP/NDP</span>
+<span class="token function">ip</span> a <span class="token function">add</span> <span class="token number">192.168</span>.0.2/24 dev ens192 <span class="token comment"># 为 ens192 分配指定的静态 IP</span>
+<span class="token function">ip</span> r <span class="token function">add</span> default via <span class="token number">192.168</span>.0.1 <span class="token comment"># 指定默认路由</span>
+<span class="token function">rm</span> /etc/resolv.conf <span class="token punctuation">;</span> <span class="token builtin class-name">echo</span> <span class="token string">&quot;nameserver 8.8.8.8&quot;</span> <span class="token operator">&gt;</span> /etc/resolv.conf <span class="token comment">#设置 DNS</span>
+</code></pre></div><h6 id="使用-systemd-resolved"><a href="#使用-systemd-resolved" class="header-anchor">#</a> 使用 systemd-resolved</h6> <p>使用与 systemd-networkd 配套的 systemd-resolved 以管理 DNS 地址。</p> <p>根据 Debian 版本不同，可能需要手动安装 systemd-resolved 软件包，也可能已经内置在系统中。</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">apt</span> <span class="token function">install</span> systemd-resolved
+</code></pre></div><p>删除 resolvconf 软件包。我们不使用它管理 DNS 地址。</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">apt</span> remove resolvconf
+</code></pre></div><p>注意，为了避免与后面使用的 dnsmasq 冲突，需要禁用 systemd-networkd 的 DNS 缓存功能。此外，由于众所周知的原因，不能强制使用 DNSSEC。</p> <p>修改 <code>/etc/systemd/resolved.conf</code> 文件，设置以下选项：</p> <div class="language-ini extra-class"><pre class="language-ini"><code><span class="token selector">[Resolve]</span>
+<span class="token constant">Cache</span><span class="token attr-value"><span class="token punctuation">=</span>no</span>
+<span class="token constant">DNSStubListener</span><span class="token attr-value"><span class="token punctuation">=</span>no</span>
+<span class="token constant">DNSSEC</span><span class="token attr-value"><span class="token punctuation">=</span>allow-downgrade</span>
+</code></pre></div><p>启动 systemd-resolved，并配置好 DNS。</p> <div class="language-bash extra-class"><pre class="language-bash"><code>systemctl <span class="token builtin class-name">enable</span> systemd-resolved
+systemctl start systemd-resolved
+<span class="token function">rm</span> /etc/resolv.conf
+<span class="token function">ln</span> -s /run/systemd/resolve/resolv.conf /etc/resolv.conf
+</code></pre></div><h6 id="为-lxc-提供网桥和-nat"><a href="#为-lxc-提供网桥和-nat" class="header-anchor">#</a> 为 LXC 提供网桥和 NAT</h6> <p>创建 <code>20-lxc-bridge.netdev</code> 文件，内容如下：</p> <div class="language-ini extra-class"><pre class="language-ini"><code><span class="token selector">[NetDev]</span>
+<span class="token constant">Name</span><span class="token attr-value"><span class="token punctuation">=</span>lxc-bridge</span>
+<span class="token constant">Kind</span><span class="token attr-value"><span class="token punctuation">=</span>bridge</span>
+</code></pre></div><p>创建 <code>20-lxc-bridge.network</code>文件，内容如下：</p> <div class="language-ini extra-class"><pre class="language-ini"><code><span class="token selector">[Match]</span>
+<span class="token constant">Name</span><span class="token attr-value"><span class="token punctuation">=</span>lxc-bridge</span>
+
+<span class="token selector">[Network]</span>
+<span class="token constant">Address</span><span class="token attr-value"><span class="token punctuation">=</span>192.168.0.1/24</span>
+<span class="token constant">IPForward</span><span class="token attr-value"><span class="token punctuation">=</span>ipv4</span>
+<span class="token constant">IPMasquerade</span><span class="token attr-value"><span class="token punctuation">=</span>yes</span>
+<span class="token constant">DHCPServer</span><span class="token attr-value"><span class="token punctuation">=</span>yes</span>
+
+<span class="token selector">[DHCPServer]</span>
+<span class="token constant">EmitDNS</span><span class="token attr-value"><span class="token punctuation">=</span>yes</span>
+<span class="token constant">DNS</span><span class="token attr-value"><span class="token punctuation">=</span>192.168.0.1</span>
+</code></pre></div><p>创建<code>20-lxc-dummy.netdev</code>文件，内容如下：</p> <div class="language-ini extra-class"><pre class="language-ini"><code><span class="token selector">[NetDev]</span>
+<span class="token constant">Name</span><span class="token attr-value"><span class="token punctuation">=</span>lxc-dummy</span>
+<span class="token constant">Kind</span><span class="token attr-value"><span class="token punctuation">=</span>dummy</span>
+</code></pre></div><p>创建<code>20-lxc-dummy.network</code>文件，内容如下：</p> <div class="language-ini extra-class"><pre class="language-ini"><code><span class="token selector">[Match]</span>
+<span class="token constant">Name</span><span class="token attr-value"><span class="token punctuation">=</span>lxc-dummy</span>
+
+<span class="token selector">[Network]</span>
+<span class="token constant">Bridge</span><span class="token attr-value"><span class="token punctuation">=</span>lxc-bridge</span>
+</code></pre></div><p>如此，名为 <code>lxc-bridge</code> 的网桥如同路由器的 LAN 口，接入的设备可自动获取 IP 并上网。</p> <p>注意，这里我们将 <code>192.168.0.1</code> 作为了 DNS 服务器，但此时还没有架设它。一会儿将解决这个问题。</p> <p>由于 LXC 容器要提供服务，端口转发是必备的，因此防火墙是必不可少的。</p> <h5 id="安装-firewalld-防火墙"><a href="#安装-firewalld-防火墙" class="header-anchor">#</a> 安装 firewalld 防火墙</h5> <p>Debian 10 已将 iptables 更换为 nftables。但我们并不手动配置这些 *tables，而是使用 firewalld 作为防火墙。firewalld 可以认为是 *tables 的前端。</p> <p>注意，一旦安装了 firewalld，之前在 systemd-networkd 中设置的 NAT 转发会作废，而 DHCP 服务也会被阻断。一会儿将解决这些问题。</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">apt</span> <span class="token function">install</span> firewalld
+systemctl <span class="token builtin class-name">enable</span> firewalld
+systemctl start firewalld
+</code></pre></div><p>缺省情况下，SSH 服务已被放行。</p> <h6 id="将后端切换为-nftables"><a href="#将后端切换为-nftables" class="header-anchor">#</a> 将后端切换为 nftables</h6> <p>依据发行版不同，firewalld 可能使用 iptables 或 nftables 做后端。推荐使用 nftables 做后端。</p> <p>打开 <code>/etc/firewalld/firewalld.conf</code> 文件，找到并设置以下选项。</p> <div class="language-ini extra-class"><pre class="language-ini"><code><span class="token comment"># FirewallBackend</span>
+<span class="token comment"># Selects the firewall backend implementation.</span>
+<span class="token comment"># Choices are:</span>
+<span class="token comment">#	- nftables (default)</span>
+<span class="token comment">#	- iptables (iptables, ip6tables, ebtables and ipset)</span>
+<span class="token constant">FirewallBackend</span><span class="token attr-value"><span class="token punctuation">=</span>nftables</span>
+</code></pre></div><p>如果之前设置为了 iptables，将其改为 nftables。修改后，可能需要重启主机才能完全生效。</p> <p>在 Debian 10 的软件包中，firewalld 依然依赖 iptables。不过，修改了配置文件并重启后，iptables 不做任何用途使用。<code>iptables -L</code> 的输出结果应该是空。不需要管它。</p> <h6 id="配置外网"><a href="#配置外网" class="header-anchor">#</a> 配置外网</h6> <p>将外网接口 <code>ens192</code> 接入 external 区域。此区域将作为 NAT 的出口，以及端口转发。</p> <div class="language-bash extra-class"><pre class="language-bash"><code>firewall-cmd --zone<span class="token operator">=</span>external --add-interface<span class="token operator">=</span>ens192 --permanent
+firewall-cmd --zone<span class="token operator">=</span>external --add-service<span class="token operator">=</span>ssh --permanent <span class="token comment"># 这条应该默认存在，不过再写一次</span>
+
+firewall-cmd --zone<span class="token operator">=</span>external --add-masquerade --permanent
+firewall-cmd --zone<span class="token operator">=</span>external --add-forward-port<span class="token operator">=</span>port<span class="token operator">=</span><span class="token number">9002</span>:proto<span class="token operator">=</span>tcp:toport<span class="token operator">=</span><span class="token number">22</span>:toaddr<span class="token operator">=</span><span class="token number">192.168</span>.0.2 --permanent
+firewall-cmd --zone<span class="token operator">=</span>external --add-forward-port<span class="token operator">=</span>port<span class="token operator">=</span><span class="token number">80</span>:proto<span class="token operator">=</span>tcp:toport<span class="token operator">=</span><span class="token number">80</span>:toaddr<span class="token operator">=</span><span class="token number">192.168</span>.0.2 --permanent
+firewall-cmd --zone<span class="token operator">=</span>external --add-forward-port<span class="token operator">=</span>port<span class="token operator">=</span><span class="token number">443</span>:proto<span class="token operator">=</span>tcp:toport<span class="token operator">=</span><span class="token number">443</span>:toaddr<span class="token operator">=</span><span class="token number">192.168</span>.0.2 --permanent
+
+firewall-cmd --reload
+</code></pre></div><p>注意，因为 firewalld 服务已经开启，如果这里没有设置 <code>--add-masquerade</code>，systemd-networkd 中设置的 <code>IPMasquerade=yes</code> 无效。另外，不要搞混在哪里设置 masquerade。对于 firewalld，在 NAT 的出口设置 masquerade；对于 systemd-networkd，在 NAT 的入口设置 masquerade。</p> <h6 id="配置内网"><a href="#配置内网" class="header-anchor">#</a> 配置内网</h6> <p>将内网 <code>lxc-bridge</code> 接入 internal 区域。此区域将被配置为类似于路由器的 LAN。</p> <div class="language-bash extra-class"><pre class="language-bash"><code>firewall-cmd --zone<span class="token operator">=</span>internal --add-interface<span class="token operator">=</span>lxc-bridge --permanent
+firewall-cmd --zone<span class="token operator">=</span>internal --add-service<span class="token operator">=</span>dhcp --permanent
+firewall-cmd --zone<span class="token operator">=</span>internal --add-service<span class="token operator">=</span>dns --permanent
+
+firewall-cmd --reload
+</code></pre></div><h6 id="重要提示"><a href="#重要提示" class="header-anchor">#</a> 重要提示</h6> <p>必须为 <code>lxc-bridge</code> 分配到一个不同于 external 区域之外的区域，而绝不可以接入到 external 区域（因为我们在 external 区域上设置了 masquerade）。</p> <p>如果主机上还有其他网卡，请根据网卡的角色手动为其指定一个区域。默认情况下，未指定区域的网卡将被接入 public 区域。作为外网使用的网卡应接入之前配置好的 external 区域。</p> <h5 id="安装-dns-服务器"><a href="#安装-dns-服务器" class="header-anchor">#</a> 安装 DNS 服务器</h5> <p>这里的 DNS 服务器是为了缓存 DNS 解析结果，因此使用 dnsmasq。</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">apt</span> <span class="token function">install</span> dnsmasq
+</code></pre></div><p>编辑 <code>/etc/dnsmasq.conf</code> 文件，内容改为：</p> <div class="language-ini extra-class"><pre class="language-ini"><code>no-resolv
+<span class="token constant">server</span><span class="token attr-value"><span class="token punctuation">=</span>114.114.114.114</span>
+<span class="token constant">interface</span><span class="token attr-value"><span class="token punctuation">=</span>lxc-bridge</span>
+</code></pre></div><p>如果希望使用 <code>/etc/resolv.conf</code> 的 DNS 服务器设置，则文件内容只需要这一行：</p> <div class="language-ini extra-class"><pre class="language-ini"><code><span class="token constant">interface</span><span class="token attr-value"><span class="token punctuation">=</span>lxc-bridge</span>
+</code></pre></div><p>启动 dnsmasq 服务。注意，如果启动失败，使用 <code>ss -unlp</code> 命令检查是否有其他程序占用了 UDP 53 端口。</p> <div class="language-bash extra-class"><pre class="language-bash"><code>systemctl <span class="token builtin class-name">enable</span> dnsmasq
+systemctl start dnsmasq
+</code></pre></div><h4 id="使用-lxc-3-0"><a href="#使用-lxc-3-0" class="header-anchor">#</a> 使用 LXC 3.0</h4> <p>Debian 9 搭配的是 LXC 2.0，而 Debian 10 搭配的是 LXC 3.0。</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">apt</span> <span class="token function">install</span> lxc
+</code></pre></div><h5 id="创建一个名为-name-的容器"><a href="#创建一个名为-name-的容器" class="header-anchor">#</a> 创建一个名为 NAME 的容器</h5> <div class="language-bash extra-class"><pre class="language-bash"><code>lxc-create -n NAME -t download -- --server mirrors.tuna.tsinghua.edu.cn/lxc-images --keyserver<span class="token operator">=</span>hkp://keyserver.ubuntu.com:80
+</code></pre></div><p>2019 年 5 月注：这里使用了清华大学开源软件镜像站作为 lxc-images 的上游仓库。但是截至目前，清华大学开源软件镜像站的 lxc-images 存在严重的索引提前于内容同步完成的情况，因此如果报错 404，请将 <code>--server mirrors.tuna.tsinghua.edu.cn/lxc-images</code> 部分删除，使用官方源。</p> <p>2019 年 12 月注：截至目前，清华大学开源软件镜像站的 lxc-images 依然存在严重的索引提前于内容同步完成的情况。山东大学镜像站已提供 lxc-images 的<a href="/guide/lxc-images.html">可靠镜像</a>。可改为以下命令。</p> <div class="language-bash extra-class"><pre class="language-bash"><code>lxc-create -n NAME -t download -- --server intranet.mirrors.oops-sdu.cn/lxc-images --no-validate
+</code></pre></div><h5 id="启停容器、进入容器"><a href="#启停容器、进入容器" class="header-anchor">#</a> 启停容器、进入容器</h5> <div class="language-bash extra-class"><pre class="language-bash"><code>lxc-start -n NAME
+lxc-attach -n NAME
+</code></pre></div><p>注意，如果你使用的是 LXC 1.0，请将 <code>lxc-start -n NAME</code> 改为 <code>lxc-start -n NAME -F</code>。</p> <p>进入容器后，可以发现未分配网络。因此，按 Ctrl+D 退出容器，然后用以下命令建议容器退出。</p> <div class="language-bash extra-class"><pre class="language-bash"><code>lxc-stop -n NAME
+</code></pre></div><h5 id="为容器分配网络、共享文件夹、自动启动"><a href="#为容器分配网络、共享文件夹、自动启动" class="header-anchor">#</a> 为容器分配网络、共享文件夹、自动启动</h5> <p>编辑 <code>/var/lib/lxc/NAME/config</code> 文件，最后两行应该像这样。（早期版本的 LXC 与此略有不同。）</p> <div class="language-ini extra-class"><pre class="language-ini"><code><span class="token comment"># Network configuration</span>
+<span class="token constant">lxc.net.0.type</span> <span class="token attr-value"><span class="token punctuation">=</span> empty</span>
+</code></pre></div><p>将其改为</p> <div class="language-ini extra-class"><pre class="language-ini"><code><span class="token comment"># Network configuration</span>
+<span class="token constant">lxc.net.0.type</span> <span class="token attr-value"><span class="token punctuation">=</span> veth</span>
+<span class="token constant">lxc.net.0.link</span> <span class="token attr-value"><span class="token punctuation">=</span> lxc-bridge</span>
+<span class="token constant">lxc.net.0.flags</span> <span class="token attr-value"><span class="token punctuation">=</span> up</span>
+<span class="token constant">lxc.net.0.hwaddr</span> <span class="token attr-value"><span class="token punctuation">=</span> 00:16:3e:xx:xx:xx</span>
+
+<span class="token comment"># Autostart</span>
+<span class="token constant">lxc.start.auto</span> <span class="token attr-value"><span class="token punctuation">=</span> 1</span>
+<span class="token constant">lxc.start.delay</span> <span class="token attr-value"><span class="token punctuation">=</span> 0</span>
+<span class="token constant">lxc.start.order</span> <span class="token attr-value"><span class="token punctuation">=</span> 0</span>
+
+<span class="token comment"># Mount</span>
+<span class="token constant">lxc.mount.entry</span> <span class="token attr-value"><span class="token punctuation">=</span> /path/to/folder1 path/to/folder2 none bind 0 0</span>
+</code></pre></div><p>即可实现相应的配置。</p> <p>请注意挂载文件夹的写法。这将把主机的 <code>/path/to/folder1</code> 文件夹与容器内的 <code>/path/to/folder2</code> 文件夹联通。容器内该文件夹必须事先存在，否则会报错。换句话说，记得在主机事先创建好 <code>/var/lib/lxc/NAME/rootfs/path/to/folder2</code> 文件夹。</p> <h5 id="示例-容器内开启-ssh"><a href="#示例-容器内开启-ssh" class="header-anchor">#</a> 示例：容器内开启 SSH</h5> <p>首先，尽管主机已经开启了 DHCP 服务，应当使用静态 IP 来配置容器，这样才能和之前在 firewalld 中配置好的端口转发规则一致。假设之前在主机内设置了 <code>firewall-cmd --zone=public --add-forward-port=port=9002:proto=tcp:toport=22:toaddr=192.168.0.2</code>，则将容器内的 IP 设置为 <code>192.168.0.2</code></p> <p>后，直接安装 SSH 服务器即可从主机的 9002 端口访问 SSH。同样，在容器内推荐使用 systemd-networkd 来配置网络。</p> <h4 id="lxc-主机的其他配置"><a href="#lxc-主机的其他配置" class="header-anchor">#</a> LXC 主机的其他配置</h4> <p>以下配置与 LXC 方案无关，仅为推荐。</p> <h5 id="安装-molly-guard"><a href="#安装-molly-guard" class="header-anchor">#</a> 安装 molly-guard</h5> <p>此软件包可避免意外关闭或重启服务器。使用 <code>lxc-attach</code> 在主机上操作容器时，以为在操作容器实际上却操作了主机是很常见的失误。</p> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token function">apt</span> <span class="token function">install</span> molly-guard
+</code></pre></div><p>可顺便将主机名更改为有意义的名称，如 <code>lxc-host</code>。</p> <div class="language-bash extra-class"><pre class="language-bash"><code>hostnamectl set-hostname lxc-host
+</code></pre></div><h5 id="安装-haveged"><a href="#安装-haveged" class="header-anchor">#</a> 安装 haveged</h5> <p>虚拟机更容易出现熵不足的问题。比如，是否开机后 SSH 连接一直超时，然后从控制台登录后 SSH 连接又突然好了？这种情况很可能是熵不足。haveged 通过使用质量较低的伪随机数填充系统的熵池，达到加速 <code>/dev/random</code> 的目的，从而避免熵不足的问题。仅当安全不是首要考虑因素时，才应使用该软件，否则应将硬件随机数发生器直通到虚拟机内部。</p> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token function">apt</span> <span class="token function">install</span> haveged
+systemctl <span class="token builtin class-name">enable</span> haveged
+systemctl start haveged
+</code></pre></div><p>注意，提供随机数是内核的事情，因此只能在主机上做这个事情。</p> <h5 id="创建-swap-文件"><a href="#创建-swap-文件" class="header-anchor">#</a> 创建 SWAP 文件</h5> <ol><li>假设 SWAP 文件的大小为 10 GiB。创建一个大小为 10GiB 的全零文件。</li></ol> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token function">dd</span> <span class="token assign-left variable">if</span><span class="token operator">=</span>/dev/zero <span class="token assign-left variable">of</span><span class="token operator">=</span>/data/swapfile <span class="token assign-left variable">bs</span><span class="token operator">=</span>1M <span class="token assign-left variable">count</span><span class="token operator">=</span><span class="token number">10240</span>
+</code></pre></div><p>*对于 XFS 或 F2FS 文件系统，请确保创建全零文件，而不是使用 fallocate 或者 dd 等创建稀疏文件。不然可能无法 mkswap 和 swapon。见 <a href="https://bugzilla.redhat.com/show_bug.cgi?id=1129205#c3" target="_blank" rel="noopener noreferrer">Bug 1129205 - fallocate to create swap file creates a file with holes<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>。</p> <p><em>如非必要，不要随便使用 dd 等命令生成空的大文件。尽可能产生稀疏文件以节约时间和保护 SSD 寿命。本处为不得已而为之。</em></p> <ol start="2"><li><p>确保该文件的所有者和组均为 root。</p></li> <li><p>将其权限置为 600。</p></li></ol> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token function">chmod</span> <span class="token number">600</span> /data/swapfile
+</code></pre></div><ol start="4"><li>格式化并临时启用该交换文件。</li></ol> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token function">mkswap</span> /data/swapfile <span class="token operator">&amp;&amp;</span> <span class="token function">swapon</span> /data/swapfile
+</code></pre></div><ol start="5"><li>确保 SWAP 生效。检查以下命令返回的结果中的 Swap 一行的值是否增加了。</li></ol> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token function">free</span> -h
+</code></pre></div><ol start="6"><li>修改 /etc/fstab。在最后增加一行</li></ol> <div class="language-sh extra-class"><pre class="language-sh"><code>/data/swapfile none swap defaults <span class="token number">0</span> <span class="token number">0</span>
+</code></pre></div><p><em>确保 /data 的挂载在该行之前出现。</em></p> <ol start="7"><li>重启系统，再用 free 命令查看 SWAP 是否生效。</li></ol> <div class="language-sh extra-class"><pre class="language-sh"><code>systemctl <span class="token function">reboot</span>
+<span class="token function">free</span> -h
+</code></pre></div><h5 id="加速-ssh-登录"><a href="#加速-ssh-登录" class="header-anchor">#</a> 加速 SSH 登录</h5> <p>默认配置的 SSH 服务会对客户端 IP 做一些检查，如 DNS 反向解析、GSS 认证，非常耗时。建议关闭。
+打开 <code>/etc/ssh/sshd_config</code> 文件，找到并设置以下选项。</p> <div class="language- extra-class"><pre class="language-text"><code>UseDNS no
+GSSAPIAuthentication no
+</code></pre></div><p>重启 SSH 服务。</p> <div class="language-sh extra-class"><pre class="language-sh"><code>systemctl restart sshd
+</code></pre></div><h2 id="镜像同步方案"><a href="#镜像同步方案" class="header-anchor">#</a> 镜像同步方案</h2> <h3 id="工具选择"><a href="#工具选择" class="header-anchor">#</a> 工具选择</h3> <p>镜像站同步的内容大致分为两类：一类是完全同步的仓库，如 ArchLinux 源；一类是需要选择性同步的仓库，如 Debian、Ubuntu 源等，受镜像站容量限制，只同步 amd64 指令集的二进制程序。</p> <p>对于前者，rsync 通常是最合适的选择。</p> <p>对于后者，我们选择了 apt-mirror 工具，该工具提供了选择性同步功能，并实现了同步的原子性。</p> <h3 id="原子性"><a href="#原子性" class="header-anchor">#</a> 原子性</h3> <p>仓库由索引文件和资源文件组成，这些文件需要保持一致。</p> <p>镜像站必须达到如下目标。</p> <table><thead><tr><th>镜像站的状态</th> <th>版本1</th> <th>版本1升级到版本2</th> <th>版本2</th> <th>版本2升级到版本3</th> <th>版本3</th></tr></thead> <tbody><tr><td>用户访问的内容</td> <td>版本1</td> <td>版本1</td> <td>版本2</td> <td>版本2</td> <td>版本3</td></tr></tbody></table> <p>即，进行同步时，镜像站需要保留新旧两个版本的内容，并在同步结束时，以非常快的速度完成版本切换。只有这样，才能保证用户使用时不会出错。想象一下，一本书，前一半页码是第1版第1次印刷的内容，后一半则变成了第1版第2次印刷的内容，这样的书显然是无法阅读的。</p> <p>apt-mirror 工具已经做好了原子性的工作。</p> <p>rsync 虽然也有 <code>--delay-updates</code> <code>--delete-after</code> 这样的选项，但从实际体验来看效果并不好，因此，我们姑且认为 rsync 不具备原子性，亲自完成保证原子性的工作。</p> <h3 id="保证原子性"><a href="#保证原子性" class="header-anchor">#</a> 保证原子性</h3> <h4 id="引子"><a href="#引子" class="header-anchor">#</a> 引子</h4> <p>在这之前，我们来探究一个小问题。</p> <p>假设磁盘上存在一个文件 <code>/path/to/file</code>。</p> <p>不考虑文件权限等问题，只从文件内容的角度来说，以下两种操作是否等价？</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token operator">&gt;</span> /path/to/file
+</code></pre></div><p>将空内容写入到该文件中。</p> <div class="language- extra-class"><pre class="language-text"><code>rm /path/to/file &amp;&amp; touch /path/to/file
+</code></pre></div><p>删除该文件，并重建一个空文件。</p> <p>看起来，<code>/path/to/file</code> 的内容均被清空，似乎是等价的。然而，并不是这样。运行并观察下面的两段代码。</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token builtin class-name">echo</span> <span class="token string">&quot;foo&quot;</span> <span class="token operator">&gt;</span> /tmp/file1
+<span class="token function">ln</span> -sf /tmp/file1 /tmp/file2
+<span class="token operator">&gt;</span> /tmp/file2
+<span class="token function">cat</span> /tmp/file1
+</code></pre></div><div class="language-bash extra-class"><pre class="language-bash"><code><span class="token builtin class-name">echo</span> <span class="token string">&quot;foo&quot;</span> <span class="token operator">&gt;</span> /tmp/file1
+<span class="token function">ln</span> -sf /tmp/file1 /tmp/file2
+<span class="token function">rm</span> /tmp/file2 <span class="token operator">&amp;&amp;</span> <span class="token function">touch</span> /tmp/file2
+<span class="token function">cat</span> /tmp/file1
+</code></pre></div><p>第一段代码，随着<code>file2</code> 被清空，<code>file1</code>  也同时被清空了。</p> <p>第二段代码，<code>file1</code> 并没有被清空，因为在删除 <code>file2</code> 这个文件时，它与 <code>file1</code> 的关系被解除了。</p> <p>PS: 为什么有那么多人认为“Linux 的软链接如同 Windows 的快捷方式”？谬论重复一千遍，也不能变为真理，但是还真有一群傻瓜认为这句话正确，原因仅仅是因为大家都这么说。真正正确的说法是，“Linux 的软链接如同 Windows 的软链接；Linux 的 .desktop 文件如同 Windows 的快捷方式”。</p> <h4 id="冗余-似乎是必要的代价"><a href="#冗余-似乎是必要的代价" class="header-anchor">#</a> 冗余，似乎是必要的代价？</h4> <p>原子性，可用以下流程表示。</p> <ul><li><p>第一步：通过魔法，提供一个目录A的副本，记为目录B。</p></li> <li><p>第二步：用户或者程序改动目录B。</p></li> <li><p>第三步：通过魔法，用目录B代替目录A。</p></li></ul> <p>通过以上的步骤，可以保证目录A始终保持一致性。如同显卡的双缓冲机制一样，下一个场景完全准备好了，才能替换上一个场景，以避免画面闪烁的情况，也就是不一致性。</p> <p>那么，如何实现步骤中的魔法呢？</p> <p><strong>方法一：复制</strong></p> <ul><li><p>效率：低。浪费磁盘空间和复制的时间。</p></li> <li><p>是否保证了原子性：是。</p></li> <li><p>例子：git——用户可以对当前工作区的文件做任何修改，然后 commit 或者 revert。为了保证已经 commit 的数据不丢失，复制一份是必须的。</p></li></ul> <p><strong>方法二：链接</strong></p> <ul><li><p>方法：链接。硬链接、软链接都行。</p></li> <li><p>效率：高。没有浪费磁盘空间，不需要复制。</p></li> <li><p>是否保证了原子性：<strong>否</strong>。</p></li> <li><p>这是一个不可行的办法。原因很简单，对目录B内文件的操作可以反过来对目录A的文件造成影响。还记得刚才的引子吗？</p></li></ul> <p>你还能想到其他的方法吗？</p> <p>很遗憾，如果没有其他魔法的支持，复制就是唯一的办法。</p> <h4 id="cow-aka-写时复制"><a href="#cow-aka-写时复制" class="header-anchor">#</a> COW (aka. 写时复制)</h4> <p>btrfs 和 ZFS 文件系统都支持 COW。COW 的意思是，将文件A复制到文件B时，暂时不执行复制动作，而是让两个文件共用一份存储空间。当文件A或B发生改动时，执行复制动作，将两个文件分开。</p> <p>COW 就是文件系统提供的“魔法”。很显然，COW 只能由文件系统提供支持。</p> <p>cp 命令提供了 COW 的支持，使用 <code>--reflink</code> 选项控制。例如：</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">cp</span> --reflink<span class="token operator">=</span>always /path/to/fileA /path/to/fileB
+</code></pre></div><p>强制使用 COW 进行复制。失败则报错。</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">cp</span> --reflink<span class="token operator">=</span>auto /path/to/fileA /path/to/fileB
+</code></pre></div><p>首先尝试 COW 进行复制，失败则会 fallback 到普通复制。</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">cp</span> --reflink<span class="token operator">=</span>never /path/to/fileA /path/to/fileB
+</code></pre></div><p>强制使用普通复制。</p> <p>将 COW 与普通复制、链接相提并论并不合适，因为 COW 和普通复制的效果一样——产生了一个与母本毫无联系的副本。在用户的眼中，COW 和普通复制是等价的。当然，在系统管理员眼中，COW 节约了时间和空间。</p> <h4 id="依赖-cow-的原子性脚本"><a href="#依赖-cow-的原子性脚本" class="header-anchor">#</a> 依赖 COW 的原子性脚本</h4> <p>有了 COW，我们可以有效率地保证原子性了。参考如下的脚本。</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token shebang important">#!/usr/bin/env bash</span>
+
+<span class="token comment"># 要保证原子性的目录路径，实际上为软链接，在脚本执行前指向 ${DIR_CURRENT}</span>
+<span class="token assign-left variable">DIR</span><span class="token operator">=</span>/path/to/dir
+<span class="token comment"># 当前版本的文件</span>
+<span class="token assign-left variable">DIR_CURRENT</span><span class="token operator">=</span>/path/to/dir-current
+<span class="token comment"># 临时目录，用来存储下一版本的文件</span>
+<span class="token assign-left variable">DIR_NEW</span><span class="token operator">=</span>/path/to/dir-new
+
+<span class="token comment"># 加锁，保证此脚本不会多次执行。此部分略去。</span>
+
+<span class="token comment"># 将 ${DIR_CURRENT} 复制到 ${DIR_NEW}。强制使用 COW。</span>
+<span class="token function">cp</span> --reflink<span class="token operator">=</span>always <span class="token string">&quot;<span class="token variable">${DIR_CURRENT}</span>&quot;</span> <span class="token string">&quot;<span class="token variable">${DIR_NEW}</span>&quot;</span>
+
+<span class="token comment"># 执行用户程序，对 ${DIR_NEW} 做任何事情。</span>
+/path/to/some/dirty/work/here <span class="token string">&quot;<span class="token variable">${DIR_NEW}</span>&quot;</span>
+
+<span class="token comment"># 将软链接指向 ${DIR_NEW}，即切换到新版本。</span>
+<span class="token function">ln</span> -sf <span class="token string">&quot;<span class="token variable">${DIR_NEW}</span>&quot;</span> <span class="token string">&quot;<span class="token variable">${DIR}</span>&quot;</span>
+
+<span class="token comment"># 用 ${DIR_NEW} 取代 ${DIR_CURRENT}</span>
+<span class="token function">rm</span> -rf <span class="token string">&quot;<span class="token variable">${DIR_CURRENT}</span>&quot;</span>
+<span class="token function">cp</span> --reflink<span class="token operator">=</span>always <span class="token string">&quot;<span class="token variable">${DIR_NEW}</span>&quot;</span> <span class="token string">&quot;<span class="token variable">${DIR_CURRENT}</span>&quot;</span>
+
+<span class="token comment"># 将软链接指向 ${DIR_CURRENT}</span>
+<span class="token function">ln</span> -sf <span class="token string">&quot;<span class="token variable">${DIR_CURRENT}</span>&quot;</span> <span class="token string">&quot;<span class="token variable">${DIR}</span>&quot;</span>
+<span class="token function">rm</span> -rf <span class="token string">&quot;<span class="token variable">${DIR_NEW}</span>&quot;</span>
+
+<span class="token comment"># 完成</span>
+</code></pre></div><p>在如上的脚本中，DIR 目录始终保持了原子性。目的达到了。</p> <h3 id="systemd-的-service-和-timer"><a href="#systemd-的-service-和-timer" class="header-anchor">#</a> systemd 的 service 和 timer</h3> <p>镜像站需要定期执行同步任务。我们不使用老旧的 corntab，而是将同步任务作为 systemd 的服务，并配置合适的定时器来定期执行。举例如下。</p> <p><code>/etc/systemd/system/example-task.service</code> 文件如下。</p> <div class="language-ini extra-class"><pre class="language-ini"><code><span class="token selector">[Unit]</span>
+<span class="token constant">Description</span><span class="token attr-value"><span class="token punctuation">=</span>Example Task</span>
+<span class="token constant">After</span><span class="token attr-value"><span class="token punctuation">=</span>network.target</span>
+<span class="token constant">Wants</span><span class="token attr-value"><span class="token punctuation">=</span>network.target</span>
+
+<span class="token selector">[Service]</span>
+<span class="token constant">Type</span><span class="token attr-value"><span class="token punctuation">=</span>simple</span>
+<span class="token constant">ExecStart</span><span class="token attr-value"><span class="token punctuation">=</span>/path/to/example/task</span>
+<span class="token constant">Restart</span><span class="token attr-value"><span class="token punctuation">=</span>no</span>
+
+<span class="token selector">[Install]</span>
+<span class="token constant">WantedBy</span><span class="token attr-value"><span class="token punctuation">=</span>multi-user.target</span>
+</code></pre></div><p><code>/etc/systemd/system/example-task.timer</code>文件如下。</p> <div class="language-ini extra-class"><pre class="language-ini"><code><span class="token selector">[Unit]</span>
+<span class="token constant">Description</span><span class="token attr-value"><span class="token punctuation">=</span>Timer for Example Task</span>
+
+<span class="token selector">[Timer]</span>
+<span class="token constant">OnCalendar</span><span class="token attr-value"><span class="token punctuation">=</span>*-*-* 17:00:00 UTC</span>
+<span class="token constant">Unit</span><span class="token attr-value"><span class="token punctuation">=</span>example-task.service</span>
+
+<span class="token selector">[Install]</span>
+<span class="token constant">WantedBy</span><span class="token attr-value"><span class="token punctuation">=</span>timers.target</span>
+</code></pre></div><p>如图所示的定时器会在协调世界时 17 点时启动对应的服务。如果该服务执行的太慢，以至于 24 小时后依然没有结束，那么定时器不会重复启动该服务的第二个实例。</p> <p>PS: Linux 中的<code>格林尼治时间</code>指<strong>格林尼治这个地区的时区</strong>，而不是零时区——别忘了，英国实行夏时制。因此，为了消除歧义，无论是与他人交谈时还是在计算机世界中，永远不使用 <code>格林尼治时间</code> 一词，也不要将时区设置为 <code>Etc/Greenwich</code>。将服务器的时区设置为 <code>协调世界时</code> 即 <code>Etc/Utc</code> 是个好习惯。</p> <p>不要忘了将定时器设置为开机自启，并启动之。</p> <div class="language-bash extra-class"><pre class="language-bash"><code>systemctl daemon-reload
+systemctl <span class="token builtin class-name">enable</span> example-task.timer
+systemctl start example-task.timer
+</code></pre></div><p>更多的配置选项可参考 systemd 的文档，不再赘述。</p></div> <footer class="page-edit"><div class="edit-link"><a href="https://github.com/oops-sdu/mirrors.qd.sdu.edu.cn/edit/master/docs/blog/BackendConfigJournal.md" target="_blank" rel="noopener noreferrer">Edit this page</a> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></div> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/blog/BirthOfYetAnotherMirrorSite.html" class="prev">
+        一个镜像站的诞生
+      </a></span> <!----></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.db05cd12.js" defer></script><script src="/assets/js/2.25301b25.js" defer></script><script src="/assets/js/10.27382cff.js" defer></script>
+  </body>
+</html>
