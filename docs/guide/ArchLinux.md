@@ -6,6 +6,11 @@
 Server = http://mirrors.qd.sdu.edu.cn/archlinux/$repo/os/$arch 
 ```
 
+可在 root 权限下使用以下命令直接设置。
+```bash
+echo 'Server = http://mirrors.qd.sdu.edu.cn/archlinux/$repo/os/$arch' > /etc/pacman.d/mirrorlist
+```
+
 使用以下命令更新系统，这会同时更新 pacman 数据库和安装的软件。
 
 ```bash
