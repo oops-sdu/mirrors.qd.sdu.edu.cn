@@ -2,12 +2,13 @@
 sidebarDepth: 1
 ---
 # Debian
+受镜像站硬盘容量限制，只对部分内容进行了同步。
 
-目前支持的指令集：仅 amd64。
+- 支持的指令集：仅 amd64。
 
-目前支持的版本：仅 buster。
+- 支持的版本：仅 buster。
 
-仅二进制包，不包含源码。
+- 仅二进制包，不包含源码。
 
 ## Debian 10
 Debian 10 (buster) 用户请将 `/etc/apt/sources.list` 文件改为以下内容：
